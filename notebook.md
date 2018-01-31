@@ -27,6 +27,7 @@
 * 2018/01/24 Create futuresystems.org account, chameleoncloud account.
 * 2018/01/24 Went through the first two session of REST and followed the steps to install MongoDB and interacting with the REST service
 	+ How to Write a Makefile start the MongoDB and REST service?
+* 2018/01/31 Modify the repo on github, add bio.tex and readme.yml
 
 # Writing
 
@@ -35,3 +36,4 @@
 * 2018/01/17 Researched and posted 5 entry for Assignment: New Technology List on google docs
 * 2018/01/21 Modified the session "unstructured data" in Assignment: Big Data Size on google docs
 * 2018/01/28 Started the new technology abstract writing
+* 2018/01/30 Finished the new technology abstract writing
