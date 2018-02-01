@@ -28,6 +28,12 @@
 * 2018/01/24 Went through the first two session of REST and followed the steps to install MongoDB and interacting with the REST service
 	+ How to Write a Makefile start the MongoDB and REST service?
 * 2018/01/31 Modify the repo on github, add bio.tex and readme.yml
+* 2018/02/01 REST Service Generation with Swagger
+    + Server side, the handbook is not working, need to use the readme.md
+    + Cannot get the client file returning the correct result ???
+        + I changed "response_type='CPU'" to "response_type='object'" at the end of default_api.py
+        +it worked!!! don't know if it is good
+    + Using curl, I can get the result: ```curl -i http://localhost:8080/api/cpu```
 
 # Writing
 
