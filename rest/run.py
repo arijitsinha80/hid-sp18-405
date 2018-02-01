@@ -1,7 +1,8 @@
 from eve import Eve
 import platform
 import psutil
-from time import gmtime, strftime
+import json
+from flask import Response
 
 my_settings = {
     'MONGO_HOST': 'localhost',
@@ -10,7 +11,6 @@ my_settings = {
     'DOMAIN': {'contacts': {}}
 }
 
-time = strftime("%a, %d %b %Y %H:%M:%S, %Z",gmtime())
 
 app = Eve(settings=my_settings)
 
@@ -31,9 +31,21 @@ def disk():
 
 @app.route('/freedisk')
 def freedisk():
-    freeDisk = {"value":list(psutil.disk_usage('/'))[2],"timeStamp": time}
+    freeDisk = list(psutil.disk_usage('/'))[2]
 
-    return "Free disk : "+str(freeDisk)+"\n"
+    return "Free Disk : "+str(freeDisk)+"\n"
+
+@app.route('/allinfo', methods = ['GET'])
+def allinfo():
+    allinfo ={"Processor name":platform.processor(), "Total Disk":list(psutil.disk_usage('/'))[0],
+              "Total RAM": list(psutil.virtual_memory())[0], "Free Disk":list(psutil.disk_usage('/'))[2]}
+
+    sdata = json.dumps(allinfo)
+    response = Response()
+    response.headers["status"] = 200
+    response.headers["Content-Type"] = "application/json; charset=utf-8"
+    response.data = sdata
+    return response
 
 if __name__ == '__main__':
     app.run()
@@ -45,4 +57,5 @@ if __name__ == '__main__':
 #curl -i http://localhost:5000/ram
 #curl -i http://localhost:5000/disk
 #curl -i http://localhost:5000/freedisk
+#curl -i http://localhost:5000/allinfo
 
