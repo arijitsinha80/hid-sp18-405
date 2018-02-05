@@ -3,6 +3,7 @@
 * 2018/01/13 Online Meeting attended 
 * 2018/01/19 Residential Meeting attended 
 * 2018/01/26 Residential Meeting attended 
+* 2018/02/02 Residential Meeting attended 
 
 # Weeks with no progress
 
@@ -34,6 +35,7 @@
         + I changed "response_type='CPU'" to "response_type='object'" at the end of default_api.py
         +it worked!!! don't know if it is good
     + Using curl, I can get the result: ```curl -i http://localhost:8080/api/cpu```
+* 2018/02/02 reproduced the REST Service Generation with Swagger problem and post on Piazza
 
 # Writing
 
