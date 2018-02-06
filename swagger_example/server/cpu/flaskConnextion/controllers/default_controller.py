@@ -1,7 +1,6 @@
 import os, platform, subprocess, re
 from controllers.cpu import CPU
-import json
-from flask import Response
+
 
 def get_processor_name():
     if platform.system() == "Windows":
@@ -18,4 +17,5 @@ def get_processor_name():
     return "cannot find cpuinfo"
 
 def cpu_get() -> str:
-    return get_processor_name()
+    return CPU(get_processor_name()).__dict__
+
