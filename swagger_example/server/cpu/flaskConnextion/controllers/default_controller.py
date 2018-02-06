@@ -17,5 +17,5 @@ def get_processor_name():
     return "cannot find cpuinfo"
 
 def cpu_get() -> str:
-    return CPU(get_processor_name()).__dict__
+    return CPU(get_processor_name()).to_dict()
 

@@ -36,6 +36,7 @@
         +it worked!!! don't know if it is good
     + Using curl, I can get the result: ```curl -i http://localhost:8080/api/cpu```
 * 2018/02/02 reproduced the REST Service Generation with Swagger problem and post on Piazza
+* 2018/02/06 Figured out the Swagger problem, finished first version of rest service for NLP using Swagger
 
 # Writing
 
