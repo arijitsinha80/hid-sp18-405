@@ -4,6 +4,7 @@
 * 2018/01/19 Residential Meeting attended 
 * 2018/01/26 Residential Meeting attended 
 * 2018/02/02 Residential Meeting attended 
+* 2018/02/09 Residential Meeting attended 
 
 # Weeks with no progress
 
@@ -37,7 +38,8 @@
     + Using curl, I can get the result: ```curl -i http://localhost:8080/api/cpu```
 * 2018/02/02 reproduced the REST Service Generation with Swagger problem and post on Piazza
 * 2018/02/06 Figured out the Swagger problem, finished first version of rest service for NLP using Swagger
-* Tried downloading Raspbian and put it on SD card
+* 2018/02/08 Tried downloading Raspbian and put it on SD card
+* 2018/02/09 Started buiding Raspberry Pi clusters. I aimed to build a hadoop cluster with the team members in later semester 
 
 # Writing
 
