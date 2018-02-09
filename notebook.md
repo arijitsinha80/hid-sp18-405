@@ -37,6 +37,7 @@
     + Using curl, I can get the result: ```curl -i http://localhost:8080/api/cpu```
 * 2018/02/02 reproduced the REST Service Generation with Swagger problem and post on Piazza
 * 2018/02/06 Figured out the Swagger problem, finished first version of rest service for NLP using Swagger
+* Tried downloading Raspbian and put it on SD card
 
 # Writing
 
@@ -46,3 +47,4 @@
 * 2018/01/21 Modified the session "unstructured data" in Assignment: Big Data Size on google docs
 * 2018/01/28 Started the new technology abstract writing
 * 2018/01/30 Finished the new technology abstract writing
+* Wrote a short md for steps of downloading Raspbian and put it on SD card
