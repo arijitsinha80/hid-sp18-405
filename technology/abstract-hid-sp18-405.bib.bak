@@ -1,0 +1,146 @@
+% Encoding: UTF-8
+% In this document you are placing your bibliographie entries as they
+% relate to the technology you use.
+% Important is that if academic refernces are available to also include them and
+%not just Misc entries.
+
+@Article{samoa-JMLR,
+  author    = {Morales, Gianmarco De Francisci and Bifet, Albert},
+  title     = {SAMOA: Scalable Advanced Massive Online Analysis},
+  journal   = {Journal of Machine Learning Research},
+  year      = {2015},
+  volume    = {16},
+  pages     = {149-153},
+  note      = {Accessed: 2018-01-28},
+  owner     = {hid-sp18-405},
+  timestamp = {2018-01-28},
+  url       = {http://jmlr.org/papers/v16/morales15a.html},
+}
+
+@Misc{stardog-docs,
+  title        = {Stardog 5 THE MANUAL},
+  howpublished = {Web Page},
+  note         = {Accessed: 2018-01-28},
+  owner        = {hid-sp18-405},
+  timestamp    = {2018-01-28},
+  url          = { https://www.stardog.com/docs/},
+}
+
+@Article{samoa-JMLR,
+  author    = {Morales, Gianmarco De Francisci and Bifet, Albert},
+  title     = {SAMOA: Scalable Advanced Massive Online Analysis},
+  journal   = {Journal of Machine Learning Research},
+  year      = {2015},
+  volume    = {16},
+  pages     = {149-153},
+  note      = {Accessed: 2018-01-28},
+  owner     = {hid-sp18-405},
+  timestamp = {2018-01-28},
+  url       = {http://jmlr.org/papers/v16/morales15a.html},
+}
+
+@Misc{lumify-web,
+  title        = {Open Source Big Data Analytics and Visualization: Lumify},
+  howpublished = {Web Page},
+  note         = {Accessed: 2018-01-25},
+  owner        = {hid-sp18-405},
+  timestamp    = {2018-01-25},
+  url          = { https://n0where.net/open-source-big-data-analytics-and-visualization-lumify},
+}
+
+@Misc{lumify-linkedin,
+  author       = {Gillard, Stefan},
+  title        = {5 open source big data analytics tools to bolster your business intelligence},
+  howpublished = {Blog},
+  month        = jul,
+  year         = {2016},
+  note         = {Accessed: 2018-01-25},
+  owner        = {hid-sp18-405},
+  timestamp    = {2018-01-25},
+  url          = { https://www.linkedin.com/pulse/5-open-source-big-data-analytics-tools-bolster-your-business-gillard/},
+}
+
+
+@Misc{nifi-wiki,
+  title        = {Apache NiFi},
+  howpublished = {Web Page},
+  note         = {Accessed: 2018-01-28},
+  owner        = {hid-sp18-405},
+  timestamp    = {2018-01-28},
+  url          = {https://en.wikipedia.org/wiki/Apache_NiFi},
+}
+
+@Misc{nifi-web,
+  title        = {Apache NiFi Web site},
+  howpublished = {Web Page},
+  note         = {Accessed: 2018-01-28},
+  owner        = {hid-sp18-405},
+  timestamp    = {2018-01-28},
+  url          = { https://nifi.apache.org/index.html },
+}
+
+@Misc{nifi-overview,
+  title        = {Apache NiFi Overview},
+  howpublished = {Web Page},
+  note         = {Accessed: 2018-01-28},
+  owner        = {hid-sp18-405},
+  timestamp    = {2018-01-28},
+  url          = {https://nifi.apache.org/docs/nifi-docs/html/overview.html},
+}
+
+@Misc{wherehows-web,
+  author       = {Sun, Eric},
+  title        = {Open Sourcing WhereHows: A Data Discovery and Lineage Portal},
+  howpublished = {Blog},
+  month        = mar,
+  year         = {2016},
+  note         = {Accessed: 2018-01-25},
+  owner        = {hid-sp18-405},
+  timestamp    = {2018-01-25},
+  url          = {https://engineering.linkedin.com/blog/2016/03/open-sourcing-wherehows--a-data-discovery-and-lineage-portal},
+}
+
+@Misc{wherehows-githubwiki,
+  title        = {WhereHows Github Home},
+  howpublished = {Code Repository},
+  month        = nov,
+  year         = {2017},
+  note         = {Accessed: 2018-01-25},
+  owner        = {hid-sp18-405},
+  timestamp    = {2018-01-25},
+  url          = { https://github.com/linkedin/WhereHows/wiki},
+}
+
+@Misc{stardog-computerword,
+  author       = {Carey, Scott},
+  title        = {Graph database vendors: Who they are, what they do and who their customers are},
+  howpublished = {Web Page},
+  month        = aug,
+  year         = {2017},
+  note         = {Accessed: 2018-01-28},
+  owner        = {hid-sp18-405},
+  timestamp    = {2018-01-28},
+  url          = { https://www.computerworlduk.com/galleries/data/graph-database-vendors-who-are-they-what-do-they-do-who-their-customers-are-3639961/},
+}
+
+@Misc{stardog-docs,
+  title        = {Stardog 5 THE MANUAL},
+  howpublished = {Web Page},
+  note         = {Accessed: 2018-01-28},
+  owner        = {hid-sp18-405},
+  timestamp    = {2018-01-28},
+  url          = { https://www.stardog.com/docs/},
+}
+
+@Article{stardog-schema,
+  author    = {Cerans, Karlis and Barzdins, Guntis and Liepins, Renars and Ovcinnikova, Julija and Rikacovs, Sergejs and Sprogis, Arturs},
+  title     = {Graphical schema editing for StarDog OWL/RDF databases using OWLGrEd/S},
+  year      = {2012},
+  volume    = {849},
+  month     = jan,
+  note      = {Accessed: 2018-01-28},
+  owner     = {hid-sp18-405},
+  timestamp = {2018-01-28},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

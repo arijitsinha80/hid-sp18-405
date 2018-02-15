@@ -10,6 +10,7 @@
 
 # Communication
 * 2018/01/21 Read the Plagiarism, Markdown section 
+* 2018/02/14 Learnt PartIV Document Scientific Research
 
 # Logistic
 
@@ -49,4 +50,5 @@
 * 2018/01/21 Modified the session "unstructured data" in Assignment: Big Data Size on google docs
 * 2018/01/28 Started the new technology abstract writing
 * 2018/01/30 Finished the new technology abstract writing
-* Wrote a short md for steps of downloading Raspbian and put it on SD card
+* 2018/02/09 Wrote a short md for steps of downloading Raspbian and put it on SD card
+* 2018/02/14 Finished the writing and uploading of technology abstracts
