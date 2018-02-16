@@ -49,46 +49,46 @@ Now I will give examples of the services with the example sentence "Tim Cook is 
 	    http://localhost:8080/nlp/pos/Tim Cook is the CEO of Apple.
 	
 	Get following response:
-	```
-	{
-  "tags": "('Tim', 'PROPN') , ('Cook', 'PROPN') , ('is', 'VERB') ,
-  ('the', 'DET') , ('CEO', 'PROPN') , ('of', 'ADP') , ('Apple', 'PROPN') , ('.', 'PUNCT')",
-  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
-	}
-	```
+
+		{
+	  "tags": "('Tim', 'PROPN') , ('Cook', 'PROPN') , ('is', 'VERB') ,
+	  ('the', 'DET') , ('CEO', 'PROPN') , ('of', 'ADP') , ('Apple', 'PROPN') , ('.', 'PUNCT')",
+	  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
+		}
+
 * dependency parsing results
 
 	    http://localhost:8080/nlp/depparse/Tim Cook is the CEO of Apple.
 	
 	Get following response:
-	```
-	{
-  "parsetree": "('Tim', 'compound', 'Cook') , ('Cook', 'nsubj', 'is'), ('is', 'ROOT', 'is') ,
-  ('the', 'det', 'CEO') , ('CEO', 'attr', 'is') , ('of', 'prep', 'CEO') , ('Apple', 'pobj', 'of') , ('.', 'punct', 'is')",
-  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
-	}
-	```
+
+		{
+	  "parsetree": "('Tim', 'compound', 'Cook') , ('Cook', 'nsubj', 'is'), ('is', 'ROOT', 'is') ,
+	  ('the', 'det', 'CEO') , ('CEO', 'attr', 'is') , ('of', 'prep', 'CEO') , ('Apple', 'pobj', 'of') , ('.', 'punct', 'is')",
+	  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
+		}
+
 * named entity recognition
-	```
-	http://localhost:8080/nlp/entity/Tim Cook is the CEO of Apple.
-	```
+
+		http://localhost:8080/nlp/entity/Tim Cook is the CEO of Apple.
+
 	Get following response:
-	```
-	{
-  "entities": "('Tim', 'PERSON') , ('Cook', 'PERSON') , ('is', '') , ('the', '') , ('CEO', '') , ('of', '') , ('Apple', 'ORG') , ('.', '')",
-  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
-	}
-	```
+	
+		{
+	  "entities": "('Tim', 'PERSON') , ('Cook', 'PERSON') , ('is', '') , ('the', '') , ('CEO', '') , ('of', '') , ('Apple', 'ORG') , ('.', '')",
+	  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
+		}
+
 * all linguistic features enabled
-    ```
-	http://localhost:8080/nlp/all/Tim Cook is the CEO of Apple.
-	```
+ 
+		http://localhost:8080/nlp/all/Tim Cook is the CEO of Apple.
+	
 	Get following response:
-	```
-	{
-  "entities": "('Tim', 'PERSON') , ('Cook', 'PERSON') , ('is', '') , ('the', '') , ('CEO', '') , ('of', '') , ('Apple', 'ORG') , ('.', '')",
-  "parsetree": "('Tim', 'compound', 'Cook') , ('Cook', 'nsubj', 'is') , ('is', 'ROOT', 'is') , ('the', 'det', 'CEO') , ('CEO', 'attr', 'is') , ('of', 'prep', 'CEO') , ('Apple', 'pobj', 'of') , ('.', 'punct', 'is')",
-  "tags": "('Tim', 'PROPN') , ('Cook', 'PROPN') , ('is', 'VERB') , ('the', 'DET') , ('CEO', 'PROPN') , ('of', 'ADP') , ('Apple', 'PROPN') , ('.', 'PUNCT')",
-  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
-	}
-	```
+
+		{
+	  "entities": "('Tim', 'PERSON') , ('Cook', 'PERSON') , ('is', '') , ('the', '') , ('CEO', '') , ('of', '') , ('Apple', 'ORG') , ('.', '')",
+	  "parsetree": "('Tim', 'compound', 'Cook') , ('Cook', 'nsubj', 'is') , ('is', 'ROOT', 'is') , ('the', 'det', 'CEO') , ('CEO', 'attr', 'is') , ('of', 'prep', 'CEO') , ('Apple', 'pobj', 'of') , ('.', 'punct', 'is')",
+	  "tags": "('Tim', 'PROPN') , ('Cook', 'PROPN') , ('is', 'VERB') , ('the', 'DET') , ('CEO', 'PROPN') , ('of', 'ADP') , ('Apple', 'PROPN') , ('.', 'PUNCT')",
+	  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
+		}
+
