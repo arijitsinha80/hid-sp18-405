@@ -1,5 +1,19 @@
 # This is for Assignment: Cloud and Big Data Rest Service with Swagger
 
+## Notes For Instructors 
+Below are the files that I modified or used which are not given by Swagger CodeGen
+* The yaml file I used is in 
+
+        hid-sp18-405/swagger/nlp.yaml
+    
+* I modified the file default_controller at 
+
+        hid-sp18-405/swagger/server/nlp/flaskConnexion/swagger_server/controllers/default_controller.py
+    
+* The nlp related modules are called from 
+
+        hid-sp18-405/nlps/
+
 ## Service Descprition
 
 I was trying to build a service with Natural Language Processing
