@@ -45,9 +45,9 @@ chapter 34: REST Service Generation with Swagger
 ## Testing and Requesting Using the Browser
 Now I will give examples of the services with the example sentence "Tim Cook is the CEO of Apple."
 * part of speech taggings
-	```
-	http://localhost:8080/nlp/pos/Tim Cook is the CEO of Apple.
-	```
+
+	    http://localhost:8080/nlp/pos/Tim Cook is the CEO of Apple.
+	
 	Get following response:
 	```
 	{
@@ -57,9 +57,9 @@ Now I will give examples of the services with the example sentence "Tim Cook is 
 	}
 	```
 * dependency parsing results
-	```
-	http://localhost:8080/nlp/depparse/Tim Cook is the CEO of Apple.
-	```
+
+	    http://localhost:8080/nlp/depparse/Tim Cook is the CEO of Apple.
+	
 	Get following response:
 	```
 	{
