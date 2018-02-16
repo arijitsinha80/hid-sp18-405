@@ -63,10 +63,11 @@ Now I will give examples of the services with the example sentence "Tim Cook is 
 	Get following response:
 
 		{
-	  "parsetree": "('Tim', 'compound', 'Cook') , ('Cook', 'nsubj', 'is'), ('is', 'ROOT', 'is') ,
-	  ('the', 'det', 'CEO') , ('CEO', 'attr', 'is') , ('of', 'prep', 'CEO') , ('Apple', 'pobj', 'of') , ('.', 'punct', 'is')",
-	  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
-		}
+	    "parsetree": "('Tim', 'compound', 'Cook') , ('Cook', 'nsubj', 'is'), ('is', 'ROOT', 'is') ,
+	    ('the', 'det', 'CEO') , ('CEO', 'attr', 'is') , ('of', 'prep', 'CEO') , 
+	    ('Apple', 'pobj', 'of') , ('.', 'punct', 'is')",
+	    "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
+        }
 
 * named entity recognition
 
@@ -75,7 +76,8 @@ Now I will give examples of the services with the example sentence "Tim Cook is 
 	Get following response:
 	
 		{
-	  "entities": "('Tim', 'PERSON') , ('Cook', 'PERSON') , ('is', '') , ('the', '') , ('CEO', '') , ('of', '') , ('Apple', 'ORG') , ('.', '')",
+	  "entities": "('Tim', 'PERSON') , ('Cook', 'PERSON') , ('is', '') , ('the', '') ,
+	   ('CEO', '') , ('of', '') , ('Apple', 'ORG') , ('.', '')",
 	  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
 		}
 
@@ -85,10 +87,14 @@ Now I will give examples of the services with the example sentence "Tim Cook is 
 	
 	Get following response:
 
-		{
-	  "entities": "('Tim', 'PERSON') , ('Cook', 'PERSON') , ('is', '') , ('the', '') , ('CEO', '') , ('of', '') , ('Apple', 'ORG') , ('.', '')",
-	  "parsetree": "('Tim', 'compound', 'Cook') , ('Cook', 'nsubj', 'is') , ('is', 'ROOT', 'is') , ('the', 'det', 'CEO') , ('CEO', 'attr', 'is') , ('of', 'prep', 'CEO') , ('Apple', 'pobj', 'of') , ('.', 'punct', 'is')",
-	  "tags": "('Tim', 'PROPN') , ('Cook', 'PROPN') , ('is', 'VERB') , ('the', 'DET') , ('CEO', 'PROPN') , ('of', 'ADP') , ('Apple', 'PROPN') , ('.', 'PUNCT')",
+	    {
+	  "entities": "('Tim', 'PERSON') , ('Cook', 'PERSON') , ('is', '') , ('the', '') , 
+	  ('CEO', '') , ('of', '') , ('Apple', 'ORG') , ('.', '')",
+	  "parsetree": "('Tim', 'compound', 'Cook') , ('Cook', 'nsubj', 'is') , ('is', 'ROOT', 'is') ,
+	   ('the', 'det', 'CEO') , ('CEO', 'attr', 'is') , ('of', 'prep', 'CEO') , 
+	   ('Apple', 'pobj', 'of') , ('.', 'punct', 'is')",
+	  "tags": "('Tim', 'PROPN') , ('Cook', 'PROPN') , ('is', 'VERB') , ('the', 'DET') , 
+	  ('CEO', 'PROPN') , ('of', 'ADP') , ('Apple', 'PROPN') , ('.', 'PUNCT')",
 	  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
 		}
 
