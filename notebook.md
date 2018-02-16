@@ -11,16 +11,18 @@
 # Communication
 * 2018/01/21 Read the Plagiarism, Markdown section 
 * 2018/02/14 Learnt PartIV Document Scientific Research
+* 2018/02/15 Redo Document Scientific Research especially Managing Bibliographies
 
 # Logistic
 
 * 2018/01/11 Posted bio on Piazza
-* 2018/01/14 Read the entire class overview section 
+* 2018/01/14 Read the entire class overview section A B C D
 
 # Theory
 
 * 2018/01/18 Watched videos: 1. Teaching Cloud and Big Data 2. Course Management
 * 2018/01/22 Watched videos: REST
+* 2018/02/15 Watched videos: Introduction to Cloud Computing Part A
 
 
 # Practice
@@ -41,6 +43,7 @@
 * 2018/02/06 Figured out the Swagger problem, finished first version of rest service for NLP using Swagger
 * 2018/02/08 Tried downloading Raspbian and put it on SD card
 * 2018/02/09 Started buiding Raspberry Pi clusters. I aimed to build a hadoop cluster with the team members in later semester 
+* 2018/02/15 Installed and started using JabRef
 
 # Writing
 
@@ -52,3 +55,4 @@
 * 2018/01/30 Finished the new technology abstract writing
 * 2018/02/09 Wrote a short md for steps of downloading Raspbian and put it on SD card
 * 2018/02/14 Finished the writing and uploading of technology abstracts
+* 2018/02/15 Modified technology abstracts mainly on latex syntax and bibliographies
