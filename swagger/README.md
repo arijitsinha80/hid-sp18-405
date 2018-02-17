@@ -1,4 +1,4 @@
-# This is for Assignment: Cloud and Big Data Rest Service with Swagger
+# Cloud and Big Data Rest Service with Swagger
 
 ## Notes For Instructors 
 Below are the files that I modified or used which are not given by Swagger CodeGen
