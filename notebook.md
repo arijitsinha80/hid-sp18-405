@@ -57,3 +57,4 @@
 * 2018/02/09 Wrote a short md for steps of downloading Raspbian and put it on SD card
 * 2018/02/14 Finished the writing and uploading of technology abstracts
 * 2018/02/15 Modified technology abstracts mainly on latex syntax and bibliographies
+* 2018/02/20 Modified technology abstracts mainly on content improvement
