@@ -17,13 +17,14 @@
 # Logistic
 
 * 2018/01/11 Posted bio on Piazza
-* 2018/01/14 Read the entire class overview section A B C D
+* 2018/01/14 Read the entire class overview section
 
 # Theory
 
 * 2018/01/18 Watched videos: 1. Teaching Cloud and Big Data 2. Course Management
 * 2018/01/22 Watched videos: REST
-* 2018/02/15 Watched videos: Introduction to Cloud Computing Part A
+* 2018/02/15 Watched videos: Introduction to Cloud Computing Part A B C D
+* 2018/02/22 Watched videos: Introduction to Cloud Computing Part E F G
 
 
 # Practice
@@ -45,6 +46,7 @@
 * 2018/02/08 Tried downloading Raspbian and put it on SD card
 * 2018/02/09 Started buiding Raspberry Pi clusters. I aimed to build a hadoop cluster with the team members in later semester 
 * 2018/02/15 Installed and started using JabRef
+* 2018/02/18 Worked on the Rasperry Pi's at Smith Research Center with Bertolt
 
 # Writing
 
