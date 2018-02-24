@@ -1,3 +1,5 @@
+DO NOT USE WORD I 
+
 # Install Raspbian on an SD card using MacOS
 
 * The instruction I followed is at [instructions](https://www.raspberrypi.org/documentation/installation/installing-images/)
