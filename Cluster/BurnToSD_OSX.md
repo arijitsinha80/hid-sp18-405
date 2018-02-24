@@ -1,14 +1,18 @@
-# This is a short note for downloading and putting raspbian on an SD card using MacOS
+# Install Raspbian on an SD card using MacOS
+
 * The instruction I followed is at [instructions](https://www.raspberrypi.org/documentation/installation/installing-images/)
 * Operating system: MacOS
 
-# Method1, Without using NOOBS
+# Method1 - Without using NOOBS
+
 ## Download 
+
 * Download page is [here](https://www.raspberrypi.org/downloads/)
 * Choose Raspbian instead of NOOBS
 * Within raspbian, there are two versions, RASPBIAN STRETCH WITH DESKTOP and RASPBIAN STRETCH LITE. I downloaded the first one (full version)
 
 ## Writing an image to the SD card 
+
 (some steps are copied from [instructions](https://www.raspberrypi.org/documentation/installation/installing-images/))
 * Followed the instructions at the beginning, I download and install [Etcher](https://etcher.io/)
 * Connect an SD card reader with the SD card inside (My macbook actually have one SD reader directly)
@@ -17,11 +21,14 @@
 * Review selections and click 'Flash!' to begin writing data to the SD card.
 
 
-# Method2, Using NOOBS
+# Method2 - Using NOOBS
+
 ## Download
+
 * download page is [here](https://www.raspberrypi.org/downloads/noobs/)
 
 ## How to install NOOBS on an SD card
+
 (some steps are copied from [instructions](https://www.raspberrypi.org/documentation/installation/noobs.md))
 Once you've downloaded the NOOBS zip file, you'll need to copy the contents to a formatted SD card on your computer. Here are the detailed steps: 
 * Format an SD card which is 8GB or larger as FAT. 
