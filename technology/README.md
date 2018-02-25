@@ -1,4 +1,8 @@
-# This is the folder containing 5 technology abstracts by Min Chen (hid-sp18-405). The following contents are from the original README file in cloudmesh-community/hid-sample/technology
+# Overview
+
+This is the folder containing 5 technology abstracts by Min Chen (hid-sp18-405). 
+
+The following contents are from the original README file in cloudmesh-community/hid-sample/technology
 
 # Setup
 
