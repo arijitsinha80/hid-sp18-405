@@ -6,6 +6,7 @@
 * 2018/02/02 Residential Meeting attended 
 * 2018/02/09 Residential Meeting attended 
 * 2018/02/16 Residential Meeting attended 
+* 2018/02/23 Residential Meeting attended 
 
 # Weeks with no progress
 
