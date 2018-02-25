@@ -61,3 +61,4 @@
 * 2018/02/14 Finished the writing and uploading of technology abstracts
 * 2018/02/15 Modified technology abstracts mainly on latex syntax and bibliographies
 * 2018/02/20 Modified technology abstracts mainly on content improvement
+* 2018/02/24 Modified technology abstracts mainly on formatting according to updated standard in hid-sample/technology
