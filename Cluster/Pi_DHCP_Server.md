@@ -42,7 +42,7 @@ choose one of the Pi's as the DHCP server, using the Pi with hostname *red00* as
 
 ## Software installation
 The first step is to install a package dhcpd, which is a popular DHCP server for the Pi. In the 
-termina
+terminal
     
         sudo apt-get update
         sudo apt-get install isc-dhcp-server
@@ -56,6 +56,7 @@ Start the editing process with *nano* as follows:
 
         sudo nano /etc/dhcp/dhcpd.conf
         
+(note: Nano is used in this tutorial, but you can use any other editors you like)
 Define subnet which will be the network that all the other Pi's will connect to. Add the 
 following lines to the file */etc/dhcp/dhcpd.conf*:
 
