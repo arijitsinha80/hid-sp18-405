@@ -42,7 +42,7 @@ choose one of the Pi's as the DHCP server, using the Pi with hostname *red00* as
 
 ## Software installation
 The first step is to install a package dhcpd, which is a popular DHCP server for the Pi. In the 
-termina
+terminal
     
         sudo apt-get update
         sudo apt-get install isc-dhcp-server

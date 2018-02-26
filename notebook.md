@@ -27,6 +27,11 @@
 * 2018/02/15 Watched videos: Introduction to Cloud Computing Part A B C D
 * 2018/02/22 Watched videos: Introduction to Cloud Computing Part E F G
 
+# Programming (Handbook reading, practice is in Practice)
+* 2018/01/23 Python: Introduction and Install
+* 2018/01/24 REST: Overview, Rest service with Eve
+* 2018/02/01 REST: Service Generation with Swagger
+* 2018/02/10 Python: Language and Libraries
 
 # Practice
 * 2018/01/23 Installed pyenv using brew, installed Python 2 and 3 via pyenv on OSX
@@ -48,6 +53,7 @@
 * 2018/02/09 Started buiding Raspberry Pi clusters. I aimed to build a hadoop cluster with the team members in later semester 
 * 2018/02/15 Installed and started using JabRef
 * 2018/02/18 Worked on the Rasperry Pi's at Smith Research Center with Bertolt
+* 2018/02/25 Worked on the Rasperry Pi's at Smith Research Center with Bertolt, focused on DHCP server setup
 
 # Writing
 
@@ -62,3 +68,4 @@
 * 2018/02/15 Modified technology abstracts mainly on latex syntax and bibliographies
 * 2018/02/20 Modified technology abstracts mainly on content improvement
 * 2018/02/24 Modified technology abstracts mainly on formatting according to updated standard in hid-sample/technology
+* 2018/02/25 wrote the tutorial for DHCP server setup
