@@ -56,7 +56,6 @@ Start the editing process with *nano* as follows:
 
         sudo nano /etc/dhcp/dhcpd.conf
         
-(note: Nano is used in this tutorial, but you can use any other editors you like)
 Define subnet which will be the network that all the other Pi's will connect to. Add the 
 following lines to the file */etc/dhcp/dhcpd.conf*:
 
