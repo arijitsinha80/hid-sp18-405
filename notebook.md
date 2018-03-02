@@ -26,6 +26,10 @@
 * 2018/01/22 Watched videos: REST
 * 2018/02/15 Watched videos: Introduction to Cloud Computing Part A B C D
 * 2018/02/22 Watched videos: Introduction to Cloud Computing Part E F G
+* 2018/03/01 Read the handbook: Introduction to Containers: docker, Kubernetes and hadoop
+* 2018/03/01 Watched videos: Introduction to Cloud Computing Part H I
+* 2018/03/01 Watched videos: Introduction to Containers: Container A
+
 
 # Programming (Handbook reading, practice is in Practice)
 * 2018/01/23 Python: Introduction and Install
