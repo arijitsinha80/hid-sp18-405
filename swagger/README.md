@@ -14,8 +14,7 @@ Below are the files that I modified or used which are not given by Swagger CodeG
 
       	hid-sp18-405/swagger/nlps/
 
-To install these modules, please cd to the above directory and
-run:
+To install these modules, please cd to the above directory and run:
 
 	python setup.py install
 
