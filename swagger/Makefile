@@ -11,7 +11,6 @@ dest:
 service: dest
 	java -jar $(JARFILE) generate -i $(YAMLFILE) -l python-flask -o $(DESTDIR) -D supportPython3=true
 	cp -r *.py $(DESTDIR)/swagger_server/controllers
-	#cp -r config.yaml $(DESTDIR)/creds
 run: 
 	cd $(DESTDIR) && pip install -r requirements.txt && \
 	python setup.py install && python -m swagger_server

@@ -1,8 +1,9 @@
 # Reproducible Cloud and Big Data Rest Service with Swagger 
 
+## Acknowlegement: I cloned the repo owned by Pathan, Shagufta (hid-sp18-516) and learnt about the make file before I modified and created my own make file for this assignment
+
 ## Notes For Instructors 
-This is the directory for reproducable Reset Service with Swagger. The Initial Swagger 
-assignment is moved to directory Swagger_old
+This is the directory for reproducable Reset Service with Swagger. The Initial Swagger assignment is moved to directory Swagger_old
 * The yaml file I used is in 
 
         hid-sp18-405/swagger/nlp.yaml
