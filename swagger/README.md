@@ -17,7 +17,7 @@ Below are the files that I modified or used which are not given by Swagger CodeG
 To install these modules, please cd to the above directory and
 run:
 
-		python setup.py install
+	python setup.py install
 
 ## Service Descprition
 
