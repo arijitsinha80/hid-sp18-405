@@ -1,22 +1,35 @@
-# Cloud and Big Data Rest Service with Swagger
+# Reproducible Cloud and Big Data Rest Service with Swagger 
 
 ## Notes For Instructors 
-Below are the files that I modified or used which are not given by Swagger CodeGen
+This is the directory for reproducable Reset Service with Swagger. The Initial Swagger 
+assignment is moved to directory Swagger_old
 * The yaml file I used is in 
 
         hid-sp18-405/swagger/nlp.yaml
     
-* I modified the file default_controller at 
+* The default_controller is at 
 
-        hid-sp18-405/swagger/server/nlp/flaskConnexion/swagger_server/controllers/default_controller.py
+        hid-sp18-405/swagger/default_controller.py
     
-* The nlp related modules are called from 
+* The nlp related modules (which are used in the default_controller.py) are called from 
 
 	  	hid-sp18-405/swagger/nlps/
 
-To install these modules, please cd to the above directory and run:
+* To install these modules, please cd to the above directory and run:
 	
  		python setup.py install
+ 		
+* The reproducibility can be achieved by using the Make file:
+    - make clean -- removes the code generated
+
+    - make service -- creates the swagger service from the yaml file and places the controllers 
+    in the appropriate directory
+
+    - make start  -- starts the service
+
+    - make stop -- stops the service
+
+    - make test -- executes a number of tests against the service
 
 ## Service Descprition
 
@@ -47,13 +60,17 @@ chapter 34: REST Service Generation with Swagger
 ## Start The Service
 
 * clone the repository
-* navigate to the server directory 
+* navigate to the directory 
 
-        cd /hid-sp18-405/swagger/server/nlp/flaskConnexion
-
+        cd /hid-sp18-405/swagger
+        
+* creates the swagger service from the yaml file with correct controllers
+        
+        make service
+        
 * start the service by execute:
 
-        python -m swagger_server
+        make start
 
 * The following will show
 
@@ -116,3 +133,12 @@ Now I will give examples of the services with the example sentence "Tim Cook is 
 	  "tokens": "Tim , Cook , is , the , CEO , of , Apple , ."
 		}
 
+## Stop The Service
+
+* Stop the service by:
+
+        make stop
+        
+* removes the code and directories generated:
+
+        make clean
