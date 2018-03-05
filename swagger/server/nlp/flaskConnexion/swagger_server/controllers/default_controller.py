@@ -6,9 +6,9 @@ from swagger_server.models.depparsed import DEPPARSED  # noqa: E501
 from swagger_server.models.entity import ENTITY  # noqa: E501
 from swagger_server.models.tagged import TAGGED  # noqa: E501
 from swagger_server import util
-import sys
-sys.path.insert(0,"/Users/master/Documents/e516 engineering cloud computing/hid-sp18-405")
-from nlps.ling import LING
+#import sys
+#sys.path.insert(0,"/Users/master/Documents/e516 engineering cloud computing/hid-sp18-405")
+from ling import LING
 
 
 def all_input_get(input):  # noqa: E501

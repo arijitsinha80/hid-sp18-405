@@ -12,7 +12,12 @@ Below are the files that I modified or used which are not given by Swagger CodeG
     
 * The nlp related modules are called from 
 
-        hid-sp18-405/nlps/
+      	hid-sp18-405/swagger/nlps/
+
+To install these modules, please cd to the above directory and
+run:
+
+		python setup.py install
 
 ## Service Descprition
 

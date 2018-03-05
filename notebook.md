@@ -28,7 +28,7 @@
 * 2018/02/22 Watched videos: Introduction to Cloud Computing Part E F G
 * 2018/03/01 Read the handbook: Introduction to Containers: docker, Kubernetes and hadoop
 * 2018/03/01 Watched videos: Introduction to Cloud Computing Part H I
-* 2018/03/01 Watched videos: Introduction to Containers: Container A
+* 2018/03/01 Watched videos: Introduction to Containers: Container A, Container B
 
 
 # Programming (Handbook reading, practice is in Practice)
