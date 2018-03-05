@@ -7,6 +7,7 @@
 * 2018/02/09 Residential Meeting attended 
 * 2018/02/16 Residential Meeting attended 
 * 2018/02/23 Residential Meeting attended 
+* 2018/03/04 Online Meeting attended
 
 # Weeks with no progress
 
@@ -58,6 +59,8 @@
 * 2018/02/15 Installed and started using JabRef
 * 2018/02/18 Worked on the Rasperry Pi's at Smith Research Center with Bertolt
 * 2018/02/25 Worked on the Rasperry Pi's at Smith Research Center with Bertolt, focused on DHCP server setup
+* 2018/03/04 Figured out how to make a setup.py file to install my python package for the Swagger assignment
+* 2018/03/04 Make the Swagger Service reproducible by creating make files
 
 # Writing
 
