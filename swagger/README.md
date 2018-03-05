@@ -13,7 +13,7 @@ assignment is moved to directory Swagger_old
     
 * The nlp related modules (which are used in the default_controller.py) are called from 
 
-	  	hid-sp18-405/swagger/nlps/
+		hid-sp18-405/swagger/nlps/
 
 * To install these modules, please cd to the above directory and run:
 	
