@@ -1,9 +1,12 @@
-.PHONY: book images
 
 JARFILE=swagger-codegen-cli-2.3.1.jar
 YAMLFILE=nlp.yaml
 DESTDIR=server/nlp/flaskConnexion
-DESTDIR2=server
+CREATED=server
+NLPDIR=nlps
+
+all: service start run
+	@echo "DONE"
 
 dest:
 	mkdir -p $(DESTDIR)
@@ -11,6 +14,7 @@ dest:
 service: dest
 	java -jar $(JARFILE) generate -i $(YAMLFILE) -l python-flask -o $(DESTDIR) -D supportPython3=true
 	cp -r *.py $(DESTDIR)/swagger_server/controllers
+	cd $(NLPDIR) && pip install -r requirements.txt && python setup.py install
 run: 
 	cd $(DESTDIR) && pip install -r requirements.txt && \
 	python setup.py install && python -m swagger_server
@@ -26,4 +30,6 @@ stop:
 	ps -ef | grep swagger | grep -v "grep"| awk '{print $$2}' | xargs kill -9
 
 clean:
-	rm -rf $(DESTDIR2)
+	rm -rf $(CREATED)
+
+
