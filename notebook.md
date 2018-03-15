@@ -8,6 +8,7 @@
 * 2018/02/16 Residential Meeting attended 
 * 2018/02/23 Residential Meeting attended 
 * 2018/03/04 Online Meeting attended
+* 2018/03/09 Residential Meeting attended
 
 # Weeks with no progress
 
@@ -30,6 +31,8 @@
 * 2018/03/01 Read the handbook: Introduction to Containers: docker, Kubernetes and hadoop
 * 2018/03/01 Watched videos: Introduction to Cloud Computing Part H I
 * 2018/03/01 Watched videos: Introduction to Containers: Container A, Container B
+* 2018/03/05 Watched videos: Introduction to Cloud Computing Part J
+* 2018/03/13 Watched videos: Introduction to Cloud Computing Part K L M
 
 
 # Programming (Handbook reading, practice is in Practice)
@@ -61,6 +64,7 @@
 * 2018/02/25 Worked on the Rasperry Pi's at Smith Research Center with Bertolt, focused on DHCP server setup
 * 2018/03/04 Figured out how to make a setup.py file to install my python package for the Swagger assignment
 * 2018/03/04 Make the Swagger Service reproducible by creating make files
+* 2018/03/09 Modified the make file for Swagger Service
 
 # Writing
 
