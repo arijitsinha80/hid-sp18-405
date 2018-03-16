@@ -38,5 +38,5 @@ clean:
 	rm -rf $(CREATED)
 
 container:
-	sudo docker build -t cloudmesh-nlp .
-	sudo docker run -p 8080:8080 cloudmesh-nlp 
+	docker build -t cloudmesh-nlp .
+	docker run -p 8080:8080 cloudmesh-nlp 

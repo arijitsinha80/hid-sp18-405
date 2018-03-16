@@ -28,8 +28,8 @@ ENV HOME  /
 ENV PYENV_ROOT /.pyenv
 ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 
-RUN pyenv install 3.6.4
-RUN pyenv global 3.6.4
+RUN pyenv install 3.6.2
+RUN pyenv global 3.6.2
 RUN python -m ensurepip
 
 RUN git clone https://github.com/cloudmesh-community/hid-sp18-405.git
@@ -37,8 +37,6 @@ RUN git clone https://github.com/cloudmesh-community/hid-sp18-405.git
 WORKDIR /hid-sp18-405/swagger/cloudmesh/nlp
 
 RUN wget http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/2.3.1/swagger-codegen-cli-2.3.1.jar
-
-# RUN pip install -r requirements.txt
 
 EXPOSE 8080
 

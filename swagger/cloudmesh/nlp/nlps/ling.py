@@ -1,6 +1,6 @@
 #from nltk import word_tokenize, pos_tag
 import spacy
-nlp = spacy.load('en')
+nlp = spacy.load('en_core_web_sm')
 
 class LING(object):
     def __init__(self, input):
