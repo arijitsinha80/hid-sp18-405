@@ -11,7 +11,8 @@ all: service start
 dest:
 	mkdir -p $(DESTDIR)
 
-service: dest
+service: 
+	dest
 	$(SWAGGERCODEGEN) generate \
 	-i $(YAMLFILE) \
 	-l python-flask \
@@ -38,6 +39,5 @@ clean:
 	rm -rf $(CREATED)
 
 container:
-
 	sudo docker build -t cloudmesh-nlp .
 	sudo docker run -p 8080:8080 cloudmesh-nlp 
