@@ -1,6 +1,6 @@
 
 SWAGGERCODEGEN=java -jar swagger-codegen-cli-2.3.1.jar
-YAMLFILE=nlp.yaml
+YAMLFILE=nlp_v2.yaml
 DESTDIR=server/nlp/flaskConnexion
 CREATED=server
 NLPDIR=nlps
@@ -28,8 +28,9 @@ start:
 	cd $(DESTDIR) && python -m swagger_server
 
 test:
-	curl http://localhost:8080/nlp/all/Tim%20Cook%20is%20the%20CEO%20of%20Apple.
-	curl http://localhost:8080/nlp/pos/Tim%20Cook%20is%20the%20CEO%20of%20Apple.
+	curl http://localhost:8080/cloudmesh/nlp/all/Tim%20Cook%20is%20the%20CEO%20of%20Apple.
+
+	curl http://localhost:8080/cloudmesh/nlp/pos/Tim%20Cook%20is%20the%20CEO%20of%20Apple.
             
 stop:
 	ps -ef | grep swagger | grep -v "grep"| awk '{print $$2}' | xargs kill -9
