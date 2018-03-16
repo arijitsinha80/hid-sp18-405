@@ -11,8 +11,7 @@ all: service start
 dest:
 	mkdir -p $(DESTDIR)
 
-service: 
-	dest
+service: dest
 	$(SWAGGERCODEGEN) generate \
 	-i $(YAMLFILE) \
 	-l python-flask \
