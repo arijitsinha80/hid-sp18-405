@@ -65,6 +65,8 @@
 * 2018/03/04 Figured out how to make a setup.py file to install my python package for the Swagger assignment
 * 2018/03/04 Make the Swagger Service reproducible by creating make files
 * 2018/03/09 Modified the make file for Swagger Service
+* 2018/03/15 Rewrite the github issues
+* 2018/03/15 Create the docker file for swagger (nlp service)
 
 # Writing
 
