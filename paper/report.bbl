@@ -1,0 +1,351 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Angles and Gutierrez}{Angles and
+  Gutierrez}{2008}]%
+        {hid-sp18-405-angles2008expre-stardog}
+\bibfield{author}{\bibinfo{person}{Renzo Angles} {and} \bibinfo{person}{Claudio
+  Gutierrez}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{The Expressive Power of SPARQL}. In
+  \bibinfo{booktitle}{{\em Proceedings of the 7th International Conference on
+  The Semantic Web}} {\em (\bibinfo{series}{ISWC '08})}.
+  \bibinfo{publisher}{Springer-Verlag}, \bibinfo{address}{Berlin, Heidelberg},
+  \bibinfo{pages}{114--129}.
+\newblock
+\showISBNx{978-3-540-88563-4}
+\showDOI{%
+\url{https://doi.org/10.1007/978-3-540-88564-1_8}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Balint}{Balint}{2017a}]%
+        {hid-sp18-405-blog-stardog-virtual2}
+\bibfield{author}{\bibinfo{person}{Jess Balint}.}
+  \bibinfo{year}{2017}\natexlab{a}.
+\newblock \bibinfo{title}{VIRTUAL GRAPHS IN STARDOG 5}.
+\newblock \bibinfo{howpublished}{blog}.   (\bibinfo{date}{May}
+  \bibinfo{year}{2017}).
+\newblock
+\showURL{%
+\url{https://www.stardog.com/blog/virtual-graphs-in-stardog-5/}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Balint}{Balint}{2017b}]%
+        {hid-sp18-405-blog-stardog-virtual}
+\bibfield{author}{\bibinfo{person}{Jess Balint}.}
+  \bibinfo{year}{2017}\natexlab{b}.
+\newblock \bibinfo{title}{VIRTUAL GRAPHS: RELATIONAL DATA IN STARDOG}.
+\newblock \bibinfo{howpublished}{blog}.   (\bibinfo{date}{Jan.}
+  \bibinfo{year}{2017}).
+\newblock
+\showURL{%
+\url{https://www.stardog.com/blog/virtual-graphs-relational-data-in-stardog/}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Bresnahan}{Bresnahan}{2017a}]%
+        {hid-sp18-405-blog-stardog-pcf}
+\bibfield{author}{\bibinfo{person}{John Bresnahan}.}
+  \bibinfo{year}{2017}\natexlab{a}.
+\newblock \bibinfo{title}{STARDOG AND PIVOTAL}.
+\newblock \bibinfo{howpublished}{blog}.   (\bibinfo{date}{May}
+  \bibinfo{year}{2017}).
+\newblock
+\showURL{%
+\url{https://www.stardog.com/stardog-for-pivotal-cf/}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Bresnahan}{Bresnahan}{2017b}]%
+        {hid-sp18-405-blog-stardog-aws}
+\bibfield{author}{\bibinfo{person}{John Bresnahan}.}
+  \bibinfo{year}{2017}\natexlab{b}.
+\newblock \bibinfo{title}{STARDOG GRAVITON: AWS MADE EASY}.
+\newblock \bibinfo{howpublished}{blog}.   (\bibinfo{date}{Jan.}
+  \bibinfo{year}{2017}).
+\newblock
+\showURL{%
+\url{https://www.stardog.com/blog/stardog-graviton-aws-made-easy/}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Calvanese, Cogrel, Komla-Ebri, Kontchakov,
+  Lanti, Rezk, Rodriguez-Muro, and Xiao}{Calvanese et~al\mbox{.}}{2017}]%
+        {hid-sp18-405-diego2017ontop-stardog}
+\bibfield{author}{\bibinfo{person}{Diego Calvanese}, \bibinfo{person}{Benjamin
+  Cogrel}, \bibinfo{person}{Sarah Komla-Ebri}, \bibinfo{person}{Roman
+  Kontchakov}, \bibinfo{person}{Davide Lanti}, \bibinfo{person}{Martin Rezk},
+  \bibinfo{person}{Mariano Rodriguez-Muro}, {and} \bibinfo{person}{Guohui
+  Xiao}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Ontop: Answering SPARQL Queries over Relational
+  Databases}.
+\newblock \bibinfo{journal}{{\em Semantic Web Journal\/}} \bibinfo{volume}{8},
+  \bibinfo{number}{3} (\bibinfo{year}{2017}), \bibinfo{pages}{471--487}.
+\newblock
+\showDOI{%
+\url{https://doi.org/10.3233/SW-160217}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Cerans, Barzdins, Liepins, Ovcinnikova,
+  Rikacovs, and Sprogis}{Cerans et~al\mbox{.}}{2012}]%
+        {hid-sp18-405-cer2012graphical-stardog}
+\bibfield{author}{\bibinfo{person}{Karlis Cerans}, \bibinfo{person}{Guntis
+  Barzdins}, \bibinfo{person}{Renars Liepins}, \bibinfo{person}{Julija
+  Ovcinnikova}, \bibinfo{person}{Sergejs Rikacovs}, {and}
+  \bibinfo{person}{Arturs Sprogis}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Graphical Schema Editing for Stardog OWL/RDF
+  Databases using OWLGrEd/S.}. In \bibinfo{booktitle}{{\em OWLED}} {\em
+  (\bibinfo{series}{CEUR Workshop Proceedings})},
+  \bibfield{editor}{\bibinfo{person}{Pavel Klinov} {and}
+  \bibinfo{person}{Matthew Horridge}} (Eds.), Vol.~\bibinfo{volume}{849}.
+  \bibinfo{publisher}{CEUR-WS.org}.
+\newblock
+\showURL{%
+\url{http://dblp.uni-trier.de/db/conf/owled/owled2012.html#CeransBLORS12}}
+\newblock
+\shownote{Accessed: 2018-01-28.}
+
+
+\bibitem[\protect\citeauthoryear{Clark}{Clark}{2017}]%
+        {hid-sp18-405-blog-stardog-kgraph}
+\bibfield{author}{\bibinfo{person}{Kendall Clark}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{WHAT IS A KNOWLEDGE GRAPH?}
+\newblock \bibinfo{howpublished}{blog}.   (\bibinfo{date}{June}
+  \bibinfo{year}{2017}).
+\newblock
+\showURL{%
+\url{https://www.stardog.com/blog/what-is-a-knowledge-graph/}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{{DB-Engines}}{{DB-Engines}}{2018a}]%
+        {hid-sp18-405-www-stardog-dbengines-graphdb}
+\bibfield{author}{\bibinfo{person}{{DB-Engines}}.}
+  \bibinfo{year}{2018}\natexlab{a}.
+\newblock \bibinfo{title}{System Properties Comparison GraphDB vs. Stardog}.
+\newblock \bibinfo{howpublished}{www}.   (\bibinfo{year}{2018}).
+\newblock
+\showURL{%
+\url{https://db-engines.com/en/system/GraphDB%3BStardog}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{{DB-Engines}}{{DB-Engines}}{2018b}]%
+        {hid-sp18-405-www-stardog-dbengines-neo4j}
+\bibfield{author}{\bibinfo{person}{{DB-Engines}}.}
+  \bibinfo{year}{2018}\natexlab{b}.
+\newblock \bibinfo{title}{System Properties Comparison Neo4j vs. Stardog}.
+\newblock \bibinfo{howpublished}{www}.   (\bibinfo{year}{2018}).
+\newblock
+\showURL{%
+\url{https://db-engines.com/en/system/Neo4j%3BStardog}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Ledvinka and K{\v{r}}emen}{Ledvinka and
+  K{\v{r}}emen}{2015}]%
+        {hid-sp18-405-ledvinka2015object-stardog}
+\bibfield{author}{\bibinfo{person}{Martin Ledvinka} {and} \bibinfo{person}{Petr
+  K{\v{r}}emen}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Object-UOBM: An Ontological Benchmark for
+  Object-Oriented Access}. In \bibinfo{booktitle}{{\em Knowledge Engineering
+  and Semantic Web}}, \bibfield{editor}{\bibinfo{person}{Pavel Klinov} {and}
+  \bibinfo{person}{Dmitry Mouromtsev}} (Eds.). \bibinfo{publisher}{Springer
+  International Publishing}, \bibinfo{address}{Cham},
+  \bibinfo{pages}{132--146}.
+\newblock
+\showISBNx{978-3-319-24543-0}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Luyen, Tireau, Venkatesan, Neveu, and
+  Larmande}{Luyen et~al\mbox{.}}{2016}]%
+        {hid-sp18-405-luyen2016development-stardog}
+\bibfield{author}{\bibinfo{person}{LE~Ngoc Luyen}, \bibinfo{person}{Anne
+  Tireau}, \bibinfo{person}{Aravind Venkatesan}, \bibinfo{person}{Pascal
+  Neveu}, {and} \bibinfo{person}{Pierre Larmande}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Development of a Knowledge System for Big Data:
+  Case Study to Plant Phenotyping Data}. In \bibinfo{booktitle}{{\em
+  Proceedings of the 6th International Conference on Web Intelligence, Mining
+  and Semantics}} {\em (\bibinfo{series}{WIMS '16})}. \bibinfo{publisher}{ACM},
+  \bibinfo{address}{New York, NY, USA}, Article \bibinfo{articleno}{27},
+  \bibinfo{numpages}{9}~pages.
+\newblock
+\showISBNx{978-1-4503-4056-4}
+\showDOI{%
+\url{https://doi.org/10.1145/2912845.2912869}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Oliveira}{Oliveira}{2017}]%
+        {hid-sp18-405-blog-stardog-ml}
+\bibfield{author}{\bibinfo{person}{Pedro Oliveira}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{LEARNING TO PREDICT}.
+\newblock \bibinfo{howpublished}{blog}.   (\bibinfo{date}{April}
+  \bibinfo{year}{2017}).
+\newblock
+\showURL{%
+\url{https://www.stardog.com/blog/learning-to-predict/}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Oliveira}{Oliveira}{2018}]%
+        {hid-sp18-405-blog-stardog-xgboost}
+\bibfield{author}{\bibinfo{person}{Pedro Oliveira}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{title}{BOOSTING MACHINE LEARNING}.
+\newblock \bibinfo{howpublished}{blog}.   (\bibinfo{date}{Feb.}
+  \bibinfo{year}{2018}).
+\newblock
+\showURL{%
+\url{https://www.stardog.com/blog/boosting-machine-learning/}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{{Ontotext}}{{Ontotext}}{2017}]%
+        {hid-sp18-405-www-stardog-ontotext}
+\bibfield{author}{\bibinfo{person}{{Ontotext}}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{Ontotext Platform}.
+\newblock \bibinfo{howpublished}{www}.   (\bibinfo{year}{2017}).
+\newblock
+\showURL{%
+\url{https://ontotext.com/products/ontotext-platform/}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{{PredictiveAnalyticsToday
+  ReviewDesk}}{{PredictiveAnalyticsToday ReviewDesk}}{2017}]%
+        {hid-sp18-405-www-stardog-predictiveanalyticstoday}
+\bibfield{author}{\bibinfo{person}{{PredictiveAnalyticsToday ReviewDesk}}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{STARDOG}.
+\newblock \bibinfo{howpublished}{Web Page}.   (\bibinfo{year}{2017}).
+\newblock
+\showURL{%
+\url{https://www.predictiveanalyticstoday.com/stardog/}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Robinson, Webber, and Eifrem}{Robinson
+  et~al\mbox{.}}{2013}]%
+        {hid-sp18-405-robinson2013graphdatabase-stardog}
+\bibfield{author}{\bibinfo{person}{Ian Robinson}, \bibinfo{person}{Jim Webber},
+  {and} \bibinfo{person}{Emil Eifrem}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \bibinfo{booktitle}{{\em Graph Databases}}.
+\newblock \bibinfo{publisher}{O'Reilly Media, Inc.}
+\newblock
+\showISBNx{1449356265, 9781449356262}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{Soehngen}{Soehngen}{2018}]%
+        {hid-sp18-405-blog-stardog-studio}
+\bibfield{author}{\bibinfo{person}{Ty Soehngen}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{title}{INTRODUCING STARDOG STUDIO}.
+\newblock \bibinfo{howpublished}{blog}.   (\bibinfo{date}{March}
+  \bibinfo{year}{2018}).
+\newblock
+\showURL{%
+\url{https://www.stardog.com/blog/introducing-stardog-studio/}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{{Stardog Union}}{{Stardog Union}}{2018a}]%
+        {hid-sp18-405-www-stardog-docs}
+\bibfield{author}{\bibinfo{person}{{Stardog Union}}.}
+  \bibinfo{year}{2018}\natexlab{a}.
+\newblock \bibinfo{title}{Stardog 5 THE MANUAL}.
+\newblock \bibinfo{howpublished}{Web Page}.   (\bibinfo{year}{2018}).
+\newblock
+\showURL{%
+\url{https://www.stardog.com/docs/}}
+\newblock
+\shownote{Accessed: 2018-01-28.}
+
+
+\bibitem[\protect\citeauthoryear{{Stardog Union}}{{Stardog Union}}{2018b}]%
+        {hid-sp18-405-www-stardog-studio}
+\bibfield{author}{\bibinfo{person}{{Stardog Union}}.}
+  \bibinfo{year}{2018}\natexlab{b}.
+\newblock \bibinfo{title}{Stardog Studio}.
+\newblock \bibinfo{howpublished}{www}.   (\bibinfo{year}{2018}).
+\newblock
+\showURL{%
+\url{https://www.stardog.com/studio/}}
+\newblock
+\shownote{Accessed: 2018-03-16.}
+
+
+\bibitem[\protect\citeauthoryear{{W3C}}{{W3C}}{2012}]%
+        {hid-sp18-405-www-stardog-r2rml}
+\bibfield{author}{\bibinfo{person}{{W3C}}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \bibinfo{title}{R2RML: RDB to RDF Mapping Language}.
+\newblock \bibinfo{howpublished}{Web Page}.   (\bibinfo{year}{2012}).
+\newblock
+\showURL{%
+\url{https://www.w3.org/TR/r2rml/}}
+\newblock
+\shownote{Accessed: 2018-03-17.}
+
+
+\end{thebibliography}

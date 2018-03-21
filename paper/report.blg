@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: report.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: report.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--numpages field, but no articleno or eid field, in hid-sp18-405-angles2008expre-stardog
+Warning--empty address in hid-sp18-405-cer2012graphical-stardog
+Warning--page numbers missing in both pages and numpages fields in hid-sp18-405-cer2012graphical-stardog
+Warning--empty address in hid-sp18-405-robinson2013graphdatabase-stardog
+You've used 21 entries,
+            5758 wiz_defined-function locations,
+            1444 strings with 19203 characters,
+and the built_in function-call counts, 30171 in all, are:
+= -- 3789
+> -- 658
+< -- 0
++ -- 182
+- -- 1040
+* -- 2227
+:= -- 2943
+add.period$ -- 127
+call.type$ -- 21
+change.case$ -- 125
+chr.to.int$ -- 17
+cite$ -- 25
+duplicate$ -- 1818
+empty$ -- 1317
+format.name$ -- 264
+if$ -- 5956
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 25
+newline$ -- 288
+num.names$ -- 168
+pop$ -- 571
+preamble$ -- 1
+purify$ -- 306
+quote$ -- 0
+skip$ -- 654
+stack$ -- 0
+substring$ -- 4631
+swap$ -- 137
+text.length$ -- 1616
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 577
+warning$ -- 4
+while$ -- 175
+width$ -- 0
+write$ -- 504
+(There were 4 warnings)

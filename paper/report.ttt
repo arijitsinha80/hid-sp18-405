@@ -1,0 +1,32 @@
+\begin{table}[htb]
+\centering
+\caption{System Properties Comparison GraphDB vs.\ Neo4j vs.\
+Stardog~\cite{hid-sp18-405-www-stardog-dbengines-neo4j}~\cite{hid-sp18-405-www-stardog-dbengines-graphdb}}\label{t:comparison}
+\begin{tabular}{llll}
+Name & GraphDB & Neo4j & Stardog \\
+\toprule
+Database model& Graph DBMS and RDF & Graph DBMS & Graph DBMS
+and RDF \\
+\midrule
+DB-Engines Ranking (Graph DBMS) &\#12 &\#1 &\#10\\
+\midrule
+DB-Engines Ranking (RDF) &\#7 &N/A &\#6\\
+\midrule
+Developer & Ontotext & Neo4j, Inc. & Complexible Inc.\\
+\midrule
+Initial release &2000 & 2007& 2010\\
+\midrule
+License & commercial & Open Source & commercial \\
+\midrule
+Implementation language & Java & Java, Scala & Java\\
+\midrule
+Any SQL supported & SPARQL & no & SPARQL \\
+\midrule
+In-memory capabilities&no &no & yes\\
+\midrule
+XML support& no & no&  partially\\
+\bottomrule
+\end{tabular}
+\end{table}
+\efloatseparator
+ 
