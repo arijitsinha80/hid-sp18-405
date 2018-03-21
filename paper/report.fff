@@ -1,7 +1,0 @@
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/stardog-architecture.png}
-  \caption{Architecture of Stardog Knowledge Graph
-  Platform~\cite{hid-sp18-405-blog-stardog-kgraph}}\label{sa:archi}
-\end{figure}
-\efloatseparator
- 
