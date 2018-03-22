@@ -21,6 +21,7 @@
 
 * 2018/01/11 Posted bio on Piazza
 * 2018/01/14 Read the entire class overview section
+* 2018/03/16 Picked the topic for the project and formed team with Bertolt
 
 # Theory
 
@@ -82,3 +83,5 @@
 * 2018/02/20 Modified technology abstracts mainly on content improvement
 * 2018/02/24 Modified technology abstracts mainly on formatting according to updated standard in hid-sample/technology
 * 2018/02/25 wrote the tutorial for DHCP server setup
+* 2018/03/14 Started gathering materials for technology paper
+* 2018/03/19 Finished technology paper
