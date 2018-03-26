@@ -17,11 +17,12 @@ There are two ways to search for Docker images on Docker Hub:
         docker search centos
 
 and here is the first several lines of the result:
-| NAME                            | DESCRIPTION                  | STAR | OFFICIAL | AUTOMATED |
-|---------------------------------|------------------------------|------|----------|-----------|
-| centos                          | The official build of CentOS | 4130 | [OK]     |           |
-| ansible/centos7-ansible         | Ansible on Centos7           | 105  |          | [OK]      |
-| imagine10255/centos6-lnmp-php56 | centos6-lnmp-php56           | 40   |          | [OK]      |
+
+        | NAME                            | DESCRIPTION                  | STAR | OFFICIAL | AUTOMATED |
+        |---------------------------------|------------------------------|------|----------|-----------|
+        | centos                          | The official build of CentOS | 4130 | [OK]     |           |
+        | ansible/centos7-ansible         | Ansible on Centos7           | 105  |          | [OK]      |
+        | imagine10255/centos6-lnmp-php56 | centos6-lnmp-php56           | 40   |          | [OK]      |
 
 
 ## Resources
