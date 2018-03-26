@@ -9,6 +9,7 @@
 * 2018/02/23 Residential Meeting attended 
 * 2018/03/04 Online Meeting attended
 * 2018/03/09 Residential Meeting attended
+* 2018/03/23 Residential Meeting attended
 
 # Weeks with no progress
 
@@ -34,7 +35,8 @@
 * 2018/03/01 Watched videos: Introduction to Containers: Container A, Container B
 * 2018/03/05 Watched videos: Introduction to Cloud Computing Part J
 * 2018/03/13 Watched videos: Introduction to Cloud Computing Part K L M
-
+* 2018/03/24 Watched videos: Introduction to Cloud Computing Part N O P Q 
+* 2018/03/25 Watched videos: Introduction to Cloud Computing Part R S T U
 
 # Programming (Handbook reading, practice is in Practice)
 * 2018/01/23 Python: Introduction and Install
@@ -85,3 +87,4 @@
 * 2018/02/25 wrote the tutorial for DHCP server setup
 * 2018/03/14 Started gathering materials for technology paper
 * 2018/03/19 Finished technology paper
+* 2018/03/22 Finished tutorial: Apache Avro
