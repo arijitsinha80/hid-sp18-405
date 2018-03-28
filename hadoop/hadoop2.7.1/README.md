@@ -1,4 +1,4 @@
-# Apache Hadoop 2.7.5 Docker image
+# Apache Hadoop 2.7.1 Docker image
 Originally cloned from [this repo](https://github.com/sequenceiq/hadoop-docker)
 
 # Build the image
@@ -6,13 +6,13 @@ Originally cloned from [this repo](https://github.com/sequenceiq/hadoop-docker)
 If you'd like to try directly from the Dockerfile you can build the image as:
 
 ```
-docker build  -t minchen57/hadoop-docker:2.7.5 .
+docker build  -t minchen57/hadoop-docker:2.7.1 .
 ```
 # Pull the image
 
 
 ```
-docker pull minchen57/hadoop-docker:2.7.5 .
+docker pull minchen57/hadoop-docker:2.7.1 .
 ```
 
 # Start a container
@@ -21,7 +21,7 @@ In order to use the Docker image you have just build or pulled use:
 
 
 ```
-docker run -it minchen57/hadoop-docker:2.7.5 /etc/bootstrap.sh -bash
+docker run -it minchen57/hadoop-docker:2.7.1 /etc/bootstrap.sh -bash
 ```
 
 # Testing
