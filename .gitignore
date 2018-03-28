@@ -115,3 +115,5 @@ ENV/
 .swp
 
 #*.pkl
+
+*.class
