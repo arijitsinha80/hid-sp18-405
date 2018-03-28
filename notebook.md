@@ -23,6 +23,7 @@
 * 2018/01/11 Posted bio on Piazza
 * 2018/01/14 Read the entire class overview section
 * 2018/03/16 Picked the topic for the project and formed team with Bertolt
+* 2018/03/23 Formed hadoop/spark group for the project
 
 # Theory
 
@@ -43,6 +44,8 @@
 * 2018/01/24 REST: Overview, Rest service with Eve
 * 2018/02/01 REST: Service Generation with Swagger
 * 2018/02/10 Python: Language and Libraries
+* 2018/03/10 Virtual Box
+* 2018/03/20 Linux
 
 # Practice
 * 2018/01/23 Installed pyenv using brew, installed Python 2 and 3 via pyenv on OSX
@@ -70,6 +73,8 @@
 * 2018/03/09 Modified the make file for Swagger Service
 * 2018/03/15 Rewrite the github issues
 * 2018/03/15 Create the docker file for swagger (nlp service)
+* 2018/03/25 Modify the docker file for hadoop
+* 2018/03/28 Finally made the docker file for hadoop work
 
 # Writing
 
@@ -88,3 +93,5 @@
 * 2018/03/14 Started gathering materials for technology paper
 * 2018/03/19 Finished technology paper
 * 2018/03/22 Finished tutorial: Apache Avro
+* 2018/03/26 Finished tutorial: Docker Hub
+* 2018/03/27 Modified all tutorials in terms of citations and quotations

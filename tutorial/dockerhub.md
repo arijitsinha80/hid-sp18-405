@@ -2,12 +2,17 @@
 
 Min Chen (hid-sp18-405) 
 
-Docker Hub is a cloud-based registry service which allows users to link to code repositories, build their own images and test them, stores manually pushed images, and links to Docker Cloud so they can deploy images to their hosts~\cite{hid-sp18-405-tutorial-dockerhub-overview}. There are both public and private repositories. Companies could have a private repository for use within their own organization, whereas public images can be used by anyone. 
+Docker Hub ``is a cloud-based registry service'' which provides a ``centralized resource for container image discovery, distribution and change management, user and team collaboration, and workflow automation throughout the development pipeline''~\cite{hid-sp18-405-tutorial-dockerhub-overview}. There are both private and public repositories. Private repository can only be used by people 
+within their own organization.
 
-There are thousands of images published on DockerHub. DockerHub is hardcoded into Docker as the default registry, so when you run the docker pull command against any image, it will be downloaded from Docker Hub~\cite{hid-sp18-405-tutorial-dockerhub-blog-use}. It provides a centralized resource for container image discovery, distribution and change management, user and team collaboration, and workflow automation throughout the development pipeline~\cite{hid-sp18-405-tutorial-dockerhub-overview}.
+Docker Hub is ``hardcoded into Docker as the default registry'', which means that the docker pull command will initialize the download automatically from Docker Hub~\cite{hid-sp18-405-tutorial-dockerhub-blog-use}. It allows users to download (pull), build, test and store their images for easy deployment on any host they may have~\cite{hid-sp18-405-tutorial-dockerhub-overview}.
 
 ## Create Docker ID and Log In
-You could create a Docker ID on the [Docker Hub main page](https://hub.docker.com/). Log-in is not necessary for pulling Docker images from the Hub but necessary for push images. After registration, you get one free private Docker Hub Repository. Upgrade to a paid plan is needed if you need more private repositories.
+Log-in is not necessary for pulling Docker images from the Hub but necessary for push images. However when you want to store images on Docker hub you need to create an account.  To create an account on Docker Hub, please visit the [Docker Hub main page](https://hub.docker.com/). The free service will give you only one private Docker Hub Repository. In case you need more, you will need to upgrade to a paid plan.
+
+For the rest of the tutorial we assume that you use the environment variable DUSER to indicate you username. It is easiset if you set it in your shell with
+        
+        export DUSER=<PUT YOUR DOCKER USERNAME HERE> 
 
 ## Searching for Docker Images
 There are two ways to search for Docker images on Docker Hub:
@@ -58,7 +63,8 @@ In order to push images to Docker Hub, you need to have a repository created.
 
 When you first create a Docker Hub user, you see a *Get started with Docker Hub* screen, from which you can click directly into *Create Repository*. You can also use the *Create* menu to *Create Repository*. When creating a new repository, you can choose to put it in your Docker ID namespace, or that of any organization that you are in the owners team~\cite{hid-sp18-405-tutorial-dockerhub-repository}. 
 
-As an example, we created a repository cloudtechnology with the name space minchen57. Hence the full name is minchen57/cloudtechnology
+As an example, we created a repository cloudtechnology with the name
+space $DUSER. Hence the full name is $DUSER/cloudtechnology
 
 
 ## Pushing Images
@@ -66,7 +72,7 @@ To push an image to the repository created, the following steps could be followe
 
 * Log into Docker Hub from the command line by specifying the username
 
-        docker login --username=minchen57
+        docker login --username=$DUSER
 
     Enter the password when prompted. If everything worked you will get a message similar to:
 
@@ -88,7 +94,7 @@ To push an image to the repository created, the following steps could be followe
 
 * Tag the image
 
-        docker tag 1f26a5f7a1b4 minchen57/cloudtechnology:firsttry
+        docker tag 1f26a5f7a1b4 $DUSER/cloudtechnology:firsttry
 
     In general, a good choice for a tag is something that will help you understand what this container should be used in conjunction with, or what it represents.
 
@@ -104,7 +110,7 @@ To push an image to the repository created, the following steps could be followe
 
 * Push the image to the repository
         
-        docker push minchen57/cloudtechnology
+        docker push $DUSER/cloudtechnology
 
     It shows: 
 
@@ -128,15 +134,17 @@ To push an image to the repository created, the following steps could be followe
 
     Now the image is available on Docker Hub and everyone can pull it since it is a public repository by using command: 
 
-        docker pull minchen57/cloudtechnology
+        docker pull $DUSER/cloudtechnology
 
 ## Resources
 
-* The offical [Overview of Docker Hub](https://docs.docker.com/docker-hub/#use-official-repositories)
+* The offical [Overview of Docker Hub](https://docs.docker.com/docker-hub/#use-official-repositories) \cite{hid-sp18-405-tutorial-dockerhub-overview}
 
-* Information about using docker repositories can be found at [Repositories on Docker Hub](https://docs.docker.com/docker-hub/repos/)
+* Information about using docker repositories can be found at [Repositories on Docker Hub](https://docs.docker.com/docker-hub/repos/) \cite{hid-sp18-405-tutorial-dockerhub-repository}
 
-* There are some blogs discussing the use of Docker Hub, for example, [How to Use DockerHub](https://www.linux.com/blog/learn/intro-to-linux/2018/1/how-use-dockerhub), [Docker Tutorial Series](https://rominirani.com/docker-tutorial-series-part-4-docker-hub-b51fb545dd8e)
+* There are some blogs discussing the use of Docker Hub, for example: [How to Use DockerHub](https://www.linux.com/blog/learn/intro-to-linux/2018/1/how-use-dockerhub) \cite{hid-sp18-405-tutorial-dockerhub-blog-use}
+
+* [Docker Tutorial Series](https://rominirani.com/docker-tutorial-series-part-4-docker-hub-b51fb545dd8e)\cite{hid-sp18-405-tutorial-dockerhub-series-part-4}
 
 
 

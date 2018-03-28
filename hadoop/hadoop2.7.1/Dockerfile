@@ -1,8 +1,9 @@
-# Creates pseudo distributed hadoop 2.7.5
+# Creates pseudo distributed hadoop 2.7.1
 #
-# docker build -t minchen57/hadoop .
+# docker build  -t minchen57/hadoop-docker:2.7.1 .
 
 FROM sequenceiq/pam:centos-6.5
+
 MAINTAINER Min Chen
 
 USER root
@@ -11,10 +12,10 @@ USER root
 
 RUN yum clean all \
     && rpm --rebuilddb \
+    && yum install -y yum-plugin-ovl \
     && yum install -y curl which tar sudo openssh-server openssh-clients rsync \
-    && yum clean all \
     && yum update -y libselinux \
-    && yum clean all
+    && yum update -y nss curl libcurl tar gzip
 
 
 # passwordless ssh
@@ -23,13 +24,6 @@ RUN ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key
 RUN ssh-keygen -q -N "" -t rsa -f /root/.ssh/id_rsa
 RUN cp /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
 
-
-# java 7
-#RUN yum install -y wget \
-#	&& wget https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/NSG/common/x86_64/jdk-7u71-linux-x64.rpm \ 
-#	&& yum localinstall -y /jdk-7u71-linux-x64.rpm \ 
-#	&& rm -f /jdk-7u71-linux-x64.rpm \
-#	&& rm -rf /var/cache/yum
 
 # java 8
 RUN curl -LO 'http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.rpm' -H 'Cookie: oraclelicense=accept-securebackup-cookie' && \
@@ -41,18 +35,13 @@ ENV PATH $PATH:$JAVA_HOME/bin
 RUN rm /usr/bin/java && ln -s $JAVA_HOME/bin/java /usr/bin/java
 
 # download native support
-RUN mkdir -p /tmp/native
-RUN yum clean all \
-	&& touch /var/lib/rpm/* \
-	&& yum update -y nss curl libcurl tar gzip
-RUN curl -L https://github.com/sequenceiq/docker-hadoop-build/releases/download/v2.7.1/hadoop-native-64-2.7.1.tgz | tar -xz -C /tmp/native
+#RUN mkdir -p /tmp/native
+#RUN curl -L https://github.com/sequenceiq/docker-hadoop-build/releases/download/v2.7.1/hadoop-native-64-2.7.1.tgz | tar -xz -C /tmp/native
 
-# hadoop
-RUN curl -s http://mirrors.ocf.berkeley.edu/apache/hadoop/common/hadoop-2.7.5/hadoop-2.7.5.tar.gz | tar -xz -C /usr/local/
-RUN cd /usr/local && ln -s ./hadoop-2.7.5 hadoop
+# hadoop 2.7.1
+RUN curl -s https://archive.apache.org/dist/hadoop/core/hadoop-2.7.1/hadoop-2.7.1.tar.gz | tar -xz -C /usr/local/
+RUN cd /usr/local && ln -s ./hadoop-2.7.1 hadoop
 
-#RUN curl -s https://archive.apache.org/dist/hadoop/core/hadoop-2.7.1/hadoop-2.7.1.tar.gz | tar -xz -C /usr/local/
-#RUN cd /usr/local && ln -s ./hadoop-2.7.1 hadoop
 
 ENV HADOOP_PREFIX /usr/local/hadoop
 ENV HADOOP_COMMON_HOME /usr/local/hadoop
@@ -81,8 +70,8 @@ ADD conf/yarn-site.xml $HADOOP_PREFIX/etc/hadoop/yarn-site.xml
 RUN $HADOOP_PREFIX/bin/hdfs namenode -format
 
 # fixing the libhadoop.so like a boss
-RUN rm -rf /usr/local/hadoop/lib/native
-RUN mv /tmp/native/* /usr/local/hadoop/lib
+#RUN rm -rf /usr/local/hadoop/lib/native
+#RUN mv /tmp/native/* /usr/local/hadoop/lib
 
 ADD conf/ssh_config /root/.ssh/config
 RUN chmod 600 /root/.ssh/config
