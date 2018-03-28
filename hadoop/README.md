@@ -1,4 +1,4 @@
-# Need to be modified
+# Originally cloned from https://github.com/sequenceiq/hadoop-docker
 
 # Apache Hadoop 2.7.1 Docker image
 
