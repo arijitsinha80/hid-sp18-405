@@ -1,6 +1,6 @@
-# Creates pseudo distributed hadoop 2.7.1
+# Creates pseudo distributed hadoop 2.9.0 and python for mapper and reducer
 #
-# docker build  -t minchen57/hadoop-docker:2.7.1 .
+# docker build  -t minchen57/hadoop-docker-python .
 
 FROM sequenceiq/pam:centos-6.5
 
@@ -34,14 +34,9 @@ ENV JAVA_HOME /usr/java/default
 ENV PATH $PATH:$JAVA_HOME/bin
 RUN rm /usr/bin/java && ln -s $JAVA_HOME/bin/java /usr/bin/java
 
-# download native support
-RUN mkdir -p /tmp/native
-RUN curl -L https://github.com/sequenceiq/docker-hadoop-build/releases/download/v2.7.1/hadoop-native-64-2.7.1.tgz | tar -xz -C /tmp/native
-
-# hadoop 2.7.1
-RUN curl -s https://archive.apache.org/dist/hadoop/core/hadoop-2.7.1/hadoop-2.7.1.tar.gz | tar -xz -C /usr/local/
-RUN cd /usr/local && ln -s ./hadoop-2.7.1 hadoop
-
+# hadoop
+RUN curl -s http://mirrors.ocf.berkeley.edu/apache/hadoop/common/hadoop-2.9.0/hadoop-2.9.0.tar.gz | tar -xz -C /usr/local/
+RUN cd /usr/local && ln -s ./hadoop-2.9.0 hadoop
 
 ENV HADOOP_PREFIX /usr/local/hadoop
 ENV HADOOP_COMMON_HOME /usr/local/hadoop
@@ -69,21 +64,9 @@ ADD conf/yarn-site.xml $HADOOP_PREFIX/etc/hadoop/yarn-site.xml
 
 RUN $HADOOP_PREFIX/bin/hdfs namenode -format
 
-# fixing the libhadoop.so like a boss
-RUN rm -rf /usr/local/hadoop/lib/native
-RUN mv /tmp/native/* /usr/local/hadoop/lib
-
 ADD conf/ssh_config /root/.ssh/config
 RUN chmod 600 /root/.ssh/config
 RUN chown root:root /root/.ssh/config
-
-# # installing supervisord
-# RUN yum install -y python-setuptools
-# RUN easy_install pip
-# RUN curl https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -o - | python
-# RUN pip install supervisor
-#
-# ADD supervisord.conf /etc/supervisord.conf
 
 ADD conf/bootstrap.sh /etc/bootstrap.sh
 RUN chown root:root /etc/bootstrap.sh
@@ -104,14 +87,29 @@ RUN echo "Port 2122" >> /etc/ssh/sshd_config
 RUN service sshd start && $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh && $HADOOP_PREFIX/sbin/start-dfs.sh && $HADOOP_PREFIX/bin/hdfs dfs -mkdir -p /user/root
 RUN service sshd start && $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh && $HADOOP_PREFIX/sbin/start-dfs.sh && $HADOOP_PREFIX/bin/hdfs dfs -put $HADOOP_PREFIX/etc/hadoop/ input
 
-# Statistic Example
-RUN mkdir -p /cloudmesh/exer1
-COPY exer1 /cloudmesh/exer1
+# Install Python
+RUN yum install -y  gcc gcc-c++ make git patch openssl-devel zlib-devel readline-devel sqlite-devel bzip2-devel
 
-# PageRank Example
-RUN mkdir -p /cloudmesh/pagerank
-COPY pagerank /cloudmesh/pagerank
-ENV PATH="${HADOOP_PREFIX}/bin:${PATH}"
+RUN yum install -q -y net-tools
+
+RUN git clone git://github.com/yyuu/pyenv.git .pyenv
+#RUN git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+
+ENV HOME  /
+ENV PYENV_ROOT /.pyenv
+ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+
+RUN pyenv install 3.6.2
+RUN pyenv global 3.6.2
+RUN python -m ensurepip
+
+# Copy the python scripts and data
+RUN mkdir -p /cloudmesh/python
+COPY python /cloudmesh/python
+RUN chmod +x /cloudmesh/python/*.py /cloudmesh/python/*.sh
+
+# Copy the text data
+COPY python/data/* /cloudmesh/python/data/
 
 CMD ["/etc/bootstrap.sh", "-d"]
 

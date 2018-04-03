@@ -10,10 +10,18 @@
 * 2018/03/04 Online Meeting attended
 * 2018/03/09 Residential Meeting attended
 * 2018/03/23 Residential Meeting attended
+* 2018/03/30 Residential Meeting attended
+
+# Term Project
+
+* 2018/03/16 Picked the topic for the project (hadoop) and formed team with Bertolt
+* 2018/03/23 Formed bigger group with 4 other students, aiming at comparing hadoop and spark
+* 2018/03/30 Tasks distributed, focused on algorithm (probably for text analysis) for hadoop
 
 # Weeks with no progress
 
 # Communication
+
 * 2018/01/21 Read the Plagiarism, Markdown section 
 * 2018/02/14 Learnt PartIV Document Scientific Research
 * 2018/02/15 Redo Document Scientific Research especially Managing Bibliographies
@@ -40,6 +48,7 @@
 * 2018/03/25 Watched videos: Introduction to Cloud Computing Part R S T U
 
 # Programming (Handbook reading, practice is in Practice)
+
 * 2018/01/23 Python: Introduction and Install
 * 2018/01/24 REST: Overview, Rest service with Eve
 * 2018/02/01 REST: Service Generation with Swagger
@@ -48,6 +57,7 @@
 * 2018/03/20 Linux
 
 # Practice
+
 * 2018/01/23 Installed pyenv using brew, installed Python 2 and 3 via pyenv on OSX
 * 2018/01/23 Wrote the eve Rest Service example, as preparation for Assignment: Develop Cloud Related Eve Rest Service.
     + Remaining question: how to integrate dynamic data
