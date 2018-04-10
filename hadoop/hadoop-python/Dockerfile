@@ -102,14 +102,19 @@ ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 RUN pyenv install 3.6.2
 RUN pyenv global 3.6.2
 RUN python -m ensurepip
+RUN pip install --upgrade pip
+RUN pip install six
+#RUN pip install nltk
+#RUN python -m nltk.downloader stopwords
+#RUN python -m nltk.downloader wordnet
 
 # Copy the python scripts and data
 RUN mkdir -p /cloudmesh/python
-COPY python /cloudmesh/python
+COPY python/data /cloudmesh/python/data
+COPY python/*py /cloudmesh/python/
+COPY python/*sh /cloudmesh/python/
 RUN chmod +x /cloudmesh/python/*.py /cloudmesh/python/*.sh
 
-# Copy the text data
-COPY python/data/* /cloudmesh/python/data/
 
 CMD ["/etc/bootstrap.sh", "-d"]
 

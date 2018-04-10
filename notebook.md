@@ -11,12 +11,18 @@
 * 2018/03/09 Residential Meeting attended
 * 2018/03/23 Residential Meeting attended
 * 2018/03/30 Residential Meeting attended
+* 2018/04/06 Residential Meeting attended
 
 # Term Project
 
 * 2018/03/16 Picked the topic for the project (hadoop) and formed team with Bertolt
 * 2018/03/23 Formed bigger group with 4 other students, aiming at comparing hadoop and spark
 * 2018/03/30 Tasks distributed, focused on algorithm (probably for text analysis) for hadoop
+* 2018/04/06 Meeting with Bo Feng, discussing implementing hadoop on echo using docker swarm and docker compose
+* 2018/04/08 Met with Bertolt discuss progress and ideas
+* 2018/04/08 Started writing the code in python for hadoop streaming
+* 2018/04/09 Finished the first version of python code for sentiment analysis and polarity 2.0 data. Tested in docker hadoop-python (pseudo-distributed)
+2018/04/09 Learnt how to use github branches while working with Bertolt
 
 # Weeks with no progress
 
