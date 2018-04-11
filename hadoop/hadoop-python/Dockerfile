@@ -1,6 +1,6 @@
 # Creates pseudo distributed hadoop 2.9.0 and python for mapper and reducer
 #
-# docker build  -t minchen57/hadoop-docker-python .
+# docker build  -t minchen57/hadoop-docker-python-sentiment:2.9.0 .
 
 FROM sequenceiq/pam:centos-6.5
 

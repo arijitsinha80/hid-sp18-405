@@ -12,6 +12,7 @@ dest:
 	mkdir -p $(DESTDIR)
 
 service: dest
+	wget http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/2.3.1/swagger-codegen-cli-2.3.1.jar
 	$(SWAGGERCODEGEN) generate \
 	-i $(YAMLFILE) \
 	-l python-flask \
@@ -37,6 +38,7 @@ stop:
 
 clean:
 	rm -rf $(CREATED)
+	rm *.jar
 
 container:
 	docker build -t cloudmesh-nlp .
