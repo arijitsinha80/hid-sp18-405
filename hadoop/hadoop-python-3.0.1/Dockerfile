@@ -51,13 +51,30 @@ RUN ${HADOOP_HOME}/bin/hdfs namenode -format
 COPY conf/init-dfs.sh /tmp
 RUN /tmp/init-dfs.sh
 
-# Statistics Example
-RUN mkdir -p /cloudmesh/exer1
-COPY exer1 /cloudmesh/exer1
+# Install Python
+RUN yum install -y  gcc gcc-c++ make git patch openssl-devel zlib-devel readline-devel sqlite-devel bzip2-devel
 
-# PageRank Example
-RUN mkdir -p /cloudmesh/pagerank
-COPY pagerank /cloudmesh/pagerank
+RUN yum install -q -y net-tools
+RUN git clone git://github.com/yyuu/pyenv.git .pyenv
+
+ENV HOME  /
+ENV PYENV_ROOT /.pyenv
+ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+
+RUN pyenv install 3.6.2
+RUN pyenv global 3.6.2
+RUN python -m ensurepip
+RUN pip install --upgrade pip
+RUN pip install six
+
+# Copy the python scripts and download data
+RUN mkdir -p /cloudmesh/python/data
+#COPY python/data /cloudmesh/python/data
+COPY python/*py /cloudmesh/python/
+COPY python/*sh /cloudmesh/python/
+RUN chmod +x /cloudmesh/python/*.py /cloudmesh/python/*.sh
+RUN curl -s http://www.cs.cornell.edu/people/pabo/movie-review-data/review_polarity.tar.gz | tar -xz -C /cloudmesh/python/data
+RUN mv /cloudmesh/python/split_data.sh /cloudmesh/python/data/split_data.sh
 
 COPY conf/bootstrap.sh /etc/bootstrap.sh
 CMD ["/etc/bootstrap.sh", "-d"]
