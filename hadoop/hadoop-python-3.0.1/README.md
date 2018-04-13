@@ -1,42 +1,31 @@
-# Docker Hadoop 3.0.1
+# Apache Hadoop 3.0.1 Docker image for sentiment analysis on movie reviews
 
-This Dockerfile builds Hadoop Docker container with CentOS base image and
-contains examples to run Hadoop such as statistics like WordCount and PageRank.
+* build image, run analysis, get results
 
-## Build
+		make all
+		
+* build the image	
 
-`docker build -t cloudmesh/hadoop:3.0.1 .`
+		make build
 
-## Run
+* run container with interactive shell
 
-`docker run -it cloudmesh/hadoop:3.0.1 /etc/bootstrap.sh -bash`
+		make container
 
-## Statistics
+* run the container with sentiment analysis
 
-Find instruction and source code to run in the following directory:
+		make run
 
-`/cloudmesh/exer1`
+* get the result after the analysis
 
-## PageRank Example
+		make get
 
-Find instruction and source code to run in the following directory:
+* stop container
 
-`/cloudmesh/pagerank`
+		make stop
 
-### Hadoop Configuration Files
+* clean up result 
 
-The configuration files are shared with Hadoop 2.7.5.
+		make clean
 
-### Tips
-
-#### Virtual Memory Limit
-
-Increase memory limit in the mapred-site.xml, for example:
-
-- mapreduce.map.memory.mba to 4096
-- mapreduce.reduce.memory.mb to 8192
-
-#### hdfs Safemode leave command
-
-`hdfs dfsadmin -safemode leave`
 

@@ -76,8 +76,13 @@ RUN chmod +x /cloudmesh/python/*.py /cloudmesh/python/*.sh
 RUN curl -s http://www.cs.cornell.edu/people/pabo/movie-review-data/review_polarity.tar.gz | tar -xz -C /cloudmesh/python/data
 RUN mv /cloudmesh/python/split_data.sh /cloudmesh/python/data/split_data.sh
 
+
 COPY conf/bootstrap.sh /etc/bootstrap.sh
-CMD ["/etc/bootstrap.sh", "-d"]
+COPY python/startup.sh /etc/startup.sh
+RUN chmod +x /etc/startup.sh
+
+#CMD ["/etc/bootstrap.sh", "-d"]
+CMD ["/etc/startup.sh", "-bash"]
 
 # HDFS ports
 EXPOSE 50010 50020 50070 50075 50090 8020 9000
