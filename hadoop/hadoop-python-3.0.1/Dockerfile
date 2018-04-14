@@ -81,6 +81,7 @@ COPY conf/bootstrap.sh /etc/bootstrap.sh
 COPY python/startup.sh /etc/startup.sh
 RUN chmod +x /etc/startup.sh
 
+
 #CMD ["/etc/bootstrap.sh", "-d"]
 CMD ["/etc/startup.sh", "-bash"]
 
