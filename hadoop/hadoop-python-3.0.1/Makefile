@@ -3,6 +3,7 @@ HADOOP_VERSION=3.0.1
 
 all: build run get stop
 	@echo "DONE"
+	
 
 dest:
 	mkdir -p $(DESTDIR)
@@ -31,3 +32,14 @@ clean:
 container: build
 	@echo "Start the container with interactive shell"
 	docker run -it minchen57/hadoop-docker-python-sentiment:$(HADOOP_VERSION) /etc/bootstrap.sh -bash 
+
+compose: compose-stop
+	#you need to input "datanode="
+	@echo "make docker-compose with 1 namenode and $(datanode) data nodes"
+	docker-compose scale namenode=1 datanode=$(datanode)
+	docker exec -it namenode bash
+
+compose-stop:
+	docker-compose kill
+	docker-compose rm -f
+		
