@@ -7,7 +7,25 @@ file before I modified and created my own make file for this assignment
 ## Notes For Instructors 
 This is the directory for reproducable Reset Service with Swagger. 
 
-* The reproducibility can be achieved by using the Make file:
+* The reproducibility can be achieved by using the Make file, one could either use it with docker container:
+
+	- make docker-all -- creates the docker image, start the container running the service
+
+	- make docker-build -- creates the docker image 
+
+	- make docker-pull -- alternatively, the image could be pulled from dockerhub
+
+	- make docker-start -- start the container which runs the REST service
+
+	- make docker-stop -- stop the container 
+
+	- make docker-remove -- remove the docker image
+
+	- make docker-clean -- stop the container and remove the image
+
+
+* Use Make file without docker container:
+
     - make clean -- removes the code generated
 
     - make service -- creates the swagger service from the yaml file 
@@ -21,7 +39,7 @@ This is the directory for reproducable Reset Service with Swagger.
 
     - make all -- creates and starts the service
     
-    - make container -- creates a docker container that runs the service
+   
 
 * The yaml file I used is in 
 

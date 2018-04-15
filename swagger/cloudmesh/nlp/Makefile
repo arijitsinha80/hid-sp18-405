@@ -59,7 +59,7 @@ test:
 	curl http://localhost:8080/cloudmesh/nlp/pos/Tim%20Cook%20is%20the%20CEO%20of%20Apple.
             
 stop:
-	ps -aux | grep swagger_server | grep -v "grep" | awk '{print $$2}' | xargs kill -9
+	ps -ef | grep swagger_server | grep -v "grep" | awk '{print $$2}' | xargs kill -9
 
 
 clean:
