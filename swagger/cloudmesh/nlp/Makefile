@@ -8,9 +8,30 @@ NLPDIR=nlps
 all: service start 
 	@echo "DONE"
 
+docker-all: docker-build docker-start
+	@echo "DONE"
+
+docker-build:
+	docker build -t minchen57/cloudmesh-nlp .
+
+docker-pull:
+	docker pull minchen57/cloudmesh-nlp
+
+docker-start:
+	docker run -p 8080:8080 minchen57/cloudmesh-nlp
+
+docker-stop:
+	docker stop $$(docker ps -alq)
+
+docker-remove:
+	docker rmi -f minchen57/cloudmesh-nlp
+
+docker-clean: docker-stop docker-remove
+
+
 dest:
 	mkdir -p $(DESTDIR)
-
+	 
 service: dest
 	wget http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/2.3.1/swagger-codegen-cli-2.3.1.jar
 	$(SWAGGERCODEGEN) generate \
@@ -18,12 +39,16 @@ service: dest
 	-l python-flask \
 	-o $(DESTDIR) \
 	-D supportPython3=true
+	
+	rm *.jar
 
 	cp -r *.py $(DESTDIR)/swagger_server/controllers
 	cd $(NLPDIR) && pip install -r requirements.txt && python setup.py install
 	
 	cd $(DESTDIR) && pip install -r requirements.txt && \
 	python setup.py install 
+	
+	
 
 start:  
 	cd $(DESTDIR) && python -m swagger_server
@@ -39,8 +64,5 @@ stop:
 
 clean:
 	rm -rf $(CREATED)
-	rm *.jar
 
-container:
-	docker build -t cloudmesh-nlp .
-	docker run -p 8080:8080 cloudmesh-nlp 
+
