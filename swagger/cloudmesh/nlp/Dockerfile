@@ -32,6 +32,7 @@ RUN pyenv install 3.6.2
 RUN pyenv global 3.6.2
 RUN python -m ensurepip
 RUN pip install --upgrade pip
+RUN pip install -U spacy
 
 RUN git clone https://github.com/cloudmesh-community/hid-sp18-405.git
 
