@@ -1,22 +1,22 @@
-# Running time for sentiment analysis hadoop version 3.0.1
+# Running time for sentiment analysis hadoop version 2.9.0
 
-| #of data nodes | rounds | mbp     | centos |
-|----------------|--------|---------|--------|
-| pseudo         | 1      | 87m42s  | 83m34s |
-|                | 2      | 86m46s  | 83m43s |
-|                | 3      |         | 83m47s |
-| 1              | 1      | 85m58s  | 84m40s |
-|                | 2      | 88m4s   | 84m43s |
-|                | 3      |         | 84m55s |
-| 2              | 1      | current | 86m2s  |
-|                | 2      |         | 84m27s |
-|                | 3      |         | 85m18s |
-| 3              | 1      |         | 86m22s |
-|                | 2      |         |        |
-|                | 3      |         |        |
-| 4              | 1      |         | 87m40s |
-|                | 2      |         |        |
-|                | 3      |         |        |
+| #of data nodes | rounds | mbp    | centos |
+|----------------|--------|--------|--------|
+| pseudo         | 1      | 87m42s | 83m34s |
+|                | 2      | 86m46s | 83m43s |
+|                | 3      |        | 83m47s |
+| 1              | 1      | 106m43 | 84m46s |
+|                | 2      |        | 85m4s  |
+|                | 3      |        |        |
+| 2              | 1      |        |        |
+|                | 2      |        |        |
+|                | 3      |        |        |
+| 3              | 1      |        |        |
+|                | 2      |        |        |
+|                | 3      |        |        |
+| 4              | 1      |        |        |
+|                | 2      |        |        |
+|                | 3      |        |        |
 
 # Information about the machine:
 
