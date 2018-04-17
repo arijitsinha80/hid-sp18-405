@@ -16,12 +16,12 @@ services:
     ports:
       - "9901:9864"
       - "8041:8042"
-  worker2:
-    build: ./hadoop-worker
-    container_name: "worker2"
-    ports:
-      - "9902:9864"
-      - "8042:8042"
+  # worker2:
+  #   build: ./hadoop-worker
+  #   container_name: "worker2"
+  #   ports:
+  #     - "9902:9864"
+  #     - "8042:8042"
   # worker3:
   #   build: ./hadoop-worker
   #   container_name: "worker3"
