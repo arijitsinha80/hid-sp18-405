@@ -1,10 +1,16 @@
 # Reproducible Cloud and Big Data Rest Service with Swagger 
 
 ## Acknowlegement: 
+
 I cloned the repo owned by Pathan, Shagufta (hid-sp18-516) and learnt about the make 
 file before I modified and created my own make file for this assignment
 
+## Important Note
+
+If one is using Ubuntu, please update docker before building the container for the service.
+
 ## Notes For Instructors 
+
 This is the directory for reproducable Reset Service with Swagger. 
 
 * The reproducibility can be achieved by using the Make file, one could either use it with docker container:
@@ -106,6 +112,7 @@ chapter 34: REST Service Generation with Swagger
 
 
 ## Testing and Requesting Using the Browser
+
 Now I will give examples of the services with the example sentence "Tim Cook is the CEO of Apple."
 * part of speech taggings
 
