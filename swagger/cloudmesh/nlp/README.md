@@ -116,7 +116,7 @@ chapter 34: REST Service Generation with Swagger
 Now I will give examples of the services with the example sentence "Tim Cook is the CEO of Apple."
 * part of speech taggings
 
-	    http://localhost:8080/nlp/pos/Tim Cook is the CEO of Apple.
+	    http://localhost:8080/cloudmesh/nlp/pos/Tim Cook is the CEO of Apple.
 	
 	Get following response:
 
@@ -128,7 +128,7 @@ Now I will give examples of the services with the example sentence "Tim Cook is 
 
 * dependency parsing results
 
-	    http://localhost:8080/nlp/depparse/Tim Cook is the CEO of Apple.
+	    http://localhost:8080/cloudmesh/nlp/depparse/Tim Cook is the CEO of Apple.
 	
 	Get following response:
 
@@ -141,7 +141,7 @@ Now I will give examples of the services with the example sentence "Tim Cook is 
 
 * named entity recognition
 
-		http://localhost:8080/nlp/entity/Tim Cook is the CEO of Apple.
+		http://localhost:8080/cloudmesh/nlp/entity/Tim Cook is the CEO of Apple.
 
 	Get following response:
 	
@@ -153,7 +153,7 @@ Now I will give examples of the services with the example sentence "Tim Cook is 
 
 * all linguistic features enabled
  
-		http://localhost:8080/nlp/all/Tim Cook is the CEO of Apple.
+		http://localhost:8080/cloudmesh/nlp/all/Tim Cook is the CEO of Apple.
 	
 	Get following response:
 
