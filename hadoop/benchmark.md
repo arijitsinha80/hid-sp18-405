@@ -1,25 +1,23 @@
 # Running time for sentiment analysis hadoop version 2.9.0
 
-| #workers | rounds | mbp     | centos | ubuntu vb | Pi |
-|----------|--------|---------|--------|-----------|----|
-| pseudo   | 1      | 87m42s  | 83m34s |           |    |
-|          | 2      | 86m46s  | 83m43s |           |    |
-|          | 3      | 97m44s  | 83m47s |           |    |
-| 1        | 1      |         |        |           |    |
-|          | 2      |         |        |           |    |
-|          | 3      |         |        |           |    |
-| 2        | 1      | 106m43s | 84m46s |           |    |
-|          | 2      | 110m20s | 85m4s  |           |    |
-|          | 3      | 109m27s | 84m49s |           |    |
-| 3        | 1      |         | 87m10s |           |    |
-|          | 2      |         | 86m48s |           |    |
-|          | 3      |         | 86m47s |           |    |
-| 4        | 1      |         | 87m30s |           |    |
-|          | 2      |         | 88m15s |           |    |
-|          | 3      |         | 88m2s  |           |    |
+| #worker | rounds | mbp     | centos | ubuntu(vb) | Pi |
+|---------|--------|---------|--------|------------|----|
+| pseudo  | 1      | 99m25s  | 83m34s | 43m24s     |    |
+|         | 2      | 100m33s | 83m43s | 42m6s      |    |
+|         | 3      | 97m44s  | 83m47s | 41m59s     |    |
+| 1       | 1      |         | 83m9s  | 44m30s     |    |
+|         | 2      |         | 83m28s | 45m4s      |    |
+|         | 3      |         | 83m55s | 45m1s      |    |
+| 2       | 1      | 106m43s | 84m46s |            |    |
+|         | 2      | 110m20s | 85m4s  |            |    |
+|         | 3      | 109m27s | 84m49s |            |    |
+| 3       | 1      |         | 87m10s |            |    |
+|         | 2      |         | 86m48s |            |    |
+|         | 3      |         | 86m47s |            |    |
+| 4       | 1      |         | 87m30s |            |    |
+|         | 2      |         | 88m15s |            |    |
+|         | 3      |         | 88m2s  |            |    |
 
-
-99m25s
 
 # Information about the machine:
 
@@ -39,4 +37,22 @@
 * 2 Core
 * 16G memory
 * centOS 
+
+## Min's Ubuntu VirtualBox
+
+### Host machine info
+
+* Asus Desktop
+* Intel(R) Core(TM) i5-4690K CPU @3.50GHz
+* 4 Cores
+* 16G memory
+* windows7
+
+### VirutualBox allocation
+
+* 11G base memory
+* 2 base Core
+
+
+
 
