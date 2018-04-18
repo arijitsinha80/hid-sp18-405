@@ -1,4 +1,5 @@
 DESTDIR=Results
+worker=1
 
 dest:
 	mkdir -p $(DESTDIR)
@@ -9,7 +10,7 @@ scale:
 	@echo "make docker-compose.yml with 1 master and $(worker) workers"
 	./scale.sh $(worker)
 
-build:scale
+build:scale 
 	docker build -t minchen57/hadoop-docker-python-sentiment-compose-base:latest hadoop-base
 	docker build -t minchen57/hadoop-docker-python-sentiment-compose-master:latest hadoop-master
 	docker build -t minchen57/hadoop-docker-python-sentiment-compose-worker:latest hadoop-worker
@@ -42,6 +43,6 @@ down:
 
 clean:
 	rm -rf $(DESTDIR)
-
+	rm docker-compose.yml
 
 		
