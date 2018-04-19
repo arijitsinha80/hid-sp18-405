@@ -1,8 +1,8 @@
 #!/bin/bash
 DESTDIR=Results-pseudo
 
-echo "Pull the image"
-docker pull minchen57/hadoop-docker-python-sentiment-pseudo:latest
+echo "Build the image"
+docker build -t minchen57/hadoop-docker-python-sentiment-pseudo:latest hadoop-pseudo
 
 echo "Run the container with sentiment analysis on hadoop"
 docker run -it --name pseudo-hadoop minchen57/hadoop-docker-python-sentiment-pseudo:latest 

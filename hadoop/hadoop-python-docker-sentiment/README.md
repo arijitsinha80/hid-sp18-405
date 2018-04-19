@@ -39,50 +39,20 @@
 
 ## Run pseudo-distributed cluster 
 
-The execution of the same analysis on pseudo-distributed cluster is isolated in the directory hadoop-pseudo, details are listed in the Readme.md file in this directory. 
+To execute the pseudo-distributed cluster and get results, one could use the shell script:
 
-* First cd to this directory then use the Makefile there:
+		./pseudo-run.sh
 
-		cd hadoop-pseudo
+There is also a Makefile in the directory hadoop-pseudo allowing more options including build image, start cluster, start interactive shell etc. For details, please see the Readme.md file
 
-
-* Build image, run analysis, get results
-
-		make all
-		
-* Build the image	
-
-		make build
-
-* Run container with interactive shell
-
-		make container
-
-* Run the container with sentiment analysis
-
-		make run
-
-* Get the result after the analysis
-
-		make get
-
-* Stop container
-
-		make stop
-
-* Clean up result 
-
-		make clean
-
+		vi hadoop-pseudo/Readme.md
 
 ## Run cluster on Echo
 
 The cluster can be deployed on FutureSystem Echo. Both pseudo-distributed and fully distributed clusters are supported. 
 
-* First cd to this directory:
-
-		cd echo
-
+* clone the repository (WILL finalize this)
+* cd to the directory hadoop-python-docker-sentiment
 * To start pseudo-distributed cluster, run analysis and get back results before shutting down the cluster
 
 		./pseudo-run.sh

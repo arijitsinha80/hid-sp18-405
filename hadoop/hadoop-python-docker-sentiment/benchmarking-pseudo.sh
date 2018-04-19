@@ -1,10 +1,17 @@
 #!/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo 1>&2 Usage: [# of iteration]
+    echo "e.g. 5"
+    exit -1
+fi
+
 DESTDIR=Results-pseudo
 rm -rf $DESTDIR
 mkdir -p $DESTDIR
 
-echo "Pull the image"
-docker pull minchen57/hadoop-docker-python-sentiment-pseudo:latest
+echo "Build the image"
+docker build -t minchen57/hadoop-docker-python-sentiment-pseudo:latest hadoop-pseudo
 
 for i in $(seq 1 $1)
 do
