@@ -1,3 +1,5 @@
+#!/bin/bash
+
 DESTDIR=Results
 
 docker-compose build
