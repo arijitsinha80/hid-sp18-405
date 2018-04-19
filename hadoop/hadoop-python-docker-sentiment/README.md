@@ -67,3 +67,21 @@ The cluster can be deployed on FutureSystem Echo. Both pseudo-distributed and fu
 * To remove the Results folders and created yml file
 
 		./clean.sh
+
+## Benchmarking running time
+
+Use the two following shell scripts to run customized number of iterations in order to compute average running time. This can be applied to both echo and local environment. 
+
+* Fully distributed cluster with (#OFWORKERS) of workers and (#ITER) iterations
+
+		./benchmark-full.sh (#ITER) (#OFWORKERS)
+Result of each iteration will be written to each line of a text file at
+
+		 ./benchmark-full/(#OFWORKERS)_worker.txt
+
+* Pseudo-distributed cluster with (#ITER) iterations
+
+		./benchmark-pseudo.sh (#ITER) 
+Result of each iteration will be written to each line of a text file at 
+
+		./benchmark-pseudo/pseudo.txt
