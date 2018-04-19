@@ -21,7 +21,7 @@ echo "Get the results"
 #docker cp pseudo-hadoop:/cloudmesh/python/output_pos_tagged ./$DESTDIR/output_pos_tagged_$TAG
 #docker cp pseudo-hadoop:/cloudmesh/python/output_neg_tagged ./$DESTDIR/output_neg_tagged_$TAG
 docker cp pseudo-hadoop:/cloudmesh/python/log.txt ./$DESTDIR/temp.txt
-tail -3 ./$DESTDIR/temp.txt |head -1>>$pseudo.txt
+tail -3 ./$DESTDIR/temp.txt |head -1>>./$DESTDIR/$pseudo.txt
 rm ./$DESTDIR/temp.txt
 echo "Stop the container"
 docker stop pseudo-hadoop
