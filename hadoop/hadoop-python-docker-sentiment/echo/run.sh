@@ -14,6 +14,7 @@ docker exec master /etc/runall.sh
 
 echo "getting the results..."
 rm -rf $(DESTDIR)
+mkdir $(DESTDIR)
 docker cp master:/cloudmesh/python/output_pos_tagged ./$(DESTDIR)
 docker cp master:/cloudmesh/python/output_neg_tagged ./$(DESTDIR)
 docker cp master:/cloudmesh/python/log.txt ./$(DESTDIR)
