@@ -12,6 +12,7 @@
 * 2018/03/23 Residential Meeting attended
 * 2018/03/30 Residential Meeting attended
 * 2018/04/06 Residential Meeting attended
+* 2018/04/13 Residential Meeting attended
 
 # Term Project
 
@@ -22,7 +23,11 @@
 * 2018/04/08 Met with Bertolt discuss progress and ideas
 * 2018/04/08 Started writing the code in python for hadoop streaming
 * 2018/04/09 Finished the first version of python code for sentiment analysis and polarity 2.0 data. Tested in docker hadoop-python (pseudo-distributed)
-2018/04/09 Learnt how to use github branches while working with Bertolt
+* 2018/04/09 Learnt how to use github branches while working with Bertolt
+* 2018/04/10 Finalized the mapreduce code and hadoop configuration files
+* 2018/04/15 Build the docker hadoop cluster with docker-compose
+* 2018/04/16 Automate setting up cluster and running analysis by makefile and start benchmarking
+* 2018/04/17 Wrote in the paper algortihm and data part
 
 # Weeks with no progress
 
