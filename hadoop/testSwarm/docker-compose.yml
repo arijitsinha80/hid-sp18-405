@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  master:
+    image: minchen57/hadoop-docker-python-sentiment-compose-master
+    ports:
+      - "9870:9870"
+      - "8088:8088"
+      - "19888:19888"
+      - "8188:8188"
+
+  worker1:
+    image: minchen57/hadoop-docker-python-sentiment-compose-worker
+    container_name: "worker1"
+    ports:
+      - "9901:9864"
+      - "8041:8042"
+
+  worker2:
+    build: ./hadoop-worker
+    ports:
+      - "9902:9864"
+      - "8042:8042"
+
