@@ -12,6 +12,10 @@ echo "starting the containers in swarm mode"
 docker stack deploy --compose-file docker-swarm.yml hadoop-sentiment
 echo "running the sentiment analysis on movie reviews at backend..."
 
+echo "pausing for 20s"
+sleep 20
+echo "Continuing ...."
+
 echo "getting physical node that runs master"
 nodeID=$(docker stack ps  -f "name=hadoop-sentiment_master.1" --format "{{.Node}}" hadoop-sentiment)
 echo $nodeID
