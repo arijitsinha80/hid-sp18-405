@@ -9,7 +9,7 @@ echo "build the cluster"
 echo "DONE"
 
 echo "starting the containers in swarm mode"
-docker stack deploy hadoop-sentiment
+docker stack deploy --compose-file docker-swarm.yml hadoop-sentiment
 echo "running the sentiment analysis on movie reviews at backend..."
 
 echo "getting physical node that runs master"
