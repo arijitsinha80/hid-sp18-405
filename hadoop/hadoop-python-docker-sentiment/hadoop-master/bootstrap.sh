@@ -28,4 +28,3 @@ if [[ $1 == "-bash" ]]; then
     /bin/bash
 fi
 
-/etc/runall.sh
