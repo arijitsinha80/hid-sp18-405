@@ -4,11 +4,11 @@ services:
   master:
     image: minchen57/hadoop-docker-python-sentiment-compose-master
     ports:
-      - "9870:9870"
+      - "50070:50070"
       - "8088:8088"
       - "19888:19888"
       - "8188:8188"
-    #command: "/etc/runall.sh"
+    command: "/etc/runall.sh"
 
   worker1:
     image: minchen57/hadoop-docker-python-sentiment-compose-worker
