@@ -14,8 +14,7 @@ services:
       restart_policy:
         condition: on-failure
     placement:    
-      constraints:
-        - node.id == sssxd7rocpl67xyvm1979p67q
+      constraints: [node.id == sssxd7rocpl67xyvm1979p67q]
       #    - node.hostname == master.node.com
     #command: "/etc/startup.sh"
 
