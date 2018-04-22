@@ -12,7 +12,7 @@ docker build -t minchen57/hadoop-docker-python-sentiment-compose-master:latest h
 docker build -t minchen57/hadoop-docker-python-sentiment-compose-worker:latest hadoop-worker
 
 echo "create the network"
-docker network prune -f
+docker network rm hadoop-sentiment
 docker network create hadoop-sentiment
 
 
@@ -34,5 +34,5 @@ docker cp master:/cloudmesh/python/log.txt ./$DESTDIR
 cp docker-compose.yml ./$DESTDIR
 
 docker-compose down
-docker network rm -f hadoop-sentiment
+docker network rm hadoop-sentiment
 echo "containers and netowrk removed"

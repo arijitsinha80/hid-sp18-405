@@ -11,7 +11,7 @@ worker=$2
 DESTDIR=benchmark-full
 mkdir -p $DESTDIR
 
-docker network rm -f hadoop-sentiment
+docker network rm hadoop-sentiment
 docker network create hadoop-sentiment
 
 echo "Build the image"
@@ -41,7 +41,7 @@ echo "Stop the container"
 docker-compose down
 done
 
-docker network rm -f hadoop-sentiment
+docker network rm hadoop-sentiment
 
 
 
