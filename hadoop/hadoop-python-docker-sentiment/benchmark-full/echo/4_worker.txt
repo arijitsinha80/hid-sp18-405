@@ -4,3 +4,7 @@ real	17m41.401s
 real	17m44.228s
 real	17m41.648s
 real	17m43.573s
+real	17m47.095s
+real	17m43.010s
+real	17m43.603s
+real	17m40.178s
