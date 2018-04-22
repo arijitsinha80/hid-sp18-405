@@ -24,7 +24,7 @@ services:
       - "9901:9864"
       - "8041:8042"
     extra_hosts:
-      - "hadoop-sentiment_master:149.165.150.77"
+      - "master:149.165.150.77"
 
 
 
