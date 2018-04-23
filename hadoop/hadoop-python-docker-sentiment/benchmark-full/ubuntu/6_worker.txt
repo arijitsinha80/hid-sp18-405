@@ -3,7 +3,6 @@ real	60m50.354s
 real	62m18.828s
 real	56m45.371s
 real	55m35.997s
-18/04/22 21:28:11 INFO mapreduce.Job:  map 7% reduce 0%
 real	58m50.927s
 real	55m44.386s
 real	57m21.827s
