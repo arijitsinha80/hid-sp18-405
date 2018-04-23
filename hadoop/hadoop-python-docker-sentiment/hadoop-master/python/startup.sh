@@ -1,6 +1,6 @@
 #!/bin/bash
 
-/etc/bootstrap.sh 2>&1 | tee -a /cloudmesh/python/log.txt
+/etc/bootstrap.sh -bash
 sleep 30
 cd /cloudmesh/python
 (time ./runPythonMapReduce.sh) 2>&1 | tee -a /cloudmesh/python/log.txt

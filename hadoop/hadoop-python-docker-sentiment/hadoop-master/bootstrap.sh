@@ -21,8 +21,7 @@ nohup $HADOOP_PREFIX/bin/yarn timelineserver &
 nohup $HADOOP_PREFIX/bin/mapred historyserver &
 
 if [[ $1 == "-d" ]]; then
-    cd /cloudmesh/python
-    ./runPythonMapReduce.sh
+    while true; do sleep 1000; done
 fi
 
 if [[ $1 == "-bash" ]]; then
