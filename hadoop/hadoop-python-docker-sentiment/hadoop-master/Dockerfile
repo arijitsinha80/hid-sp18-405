@@ -34,7 +34,7 @@ COPY python/startup.sh /etc/startup.sh
 RUN chmod +x /etc/runall.sh
 RUN chmod +x /etc/startup.sh
 
-ENTRYPOINT: ["/etc/bootstrap.sh", "-d"]
+ENTRYPOINT ["/etc/starup.sh","-d"]
 #CMD ["/etc/bootstrap.sh", "-run"]
 #CMD ["/etc/bootstrap.sh", "-d"]
 #CMD ["/etc/startup.sh", "-bash"]
