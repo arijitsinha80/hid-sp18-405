@@ -29,5 +29,6 @@ if [[ $1 == "-bash" ]]; then
 fi
 
 if [[ $1 == "-run" ]]; then
+    sleep 30
     /cloudmesh/python/runPythonMapReduce.sh
 fi
