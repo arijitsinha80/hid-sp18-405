@@ -28,3 +28,6 @@ if [[ $1 == "-bash" ]]; then
     /bin/bash
 fi
 
+if [[ $1 == "-run" ]]; then
+    cloudmesh/python/runPythonMapReduce.sh
+fi
