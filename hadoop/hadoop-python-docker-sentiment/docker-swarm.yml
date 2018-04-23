@@ -20,7 +20,7 @@ services:
       - master
     deploy:
       mode: replicated
-      replicas: 2
+      replicas: 4
 
 
 
