@@ -17,6 +17,9 @@ services:
     #container_name: "worker1"
     depends_on:
       - master
+    deploy:
+      mode: replicated
+      replicas: 4
 
 
 
