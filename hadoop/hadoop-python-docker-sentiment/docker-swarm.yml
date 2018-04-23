@@ -11,6 +11,13 @@ services:
     container_name: "master"
     hostname: "master"
     domainname: "master"
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      placement:    
+        constraints: [node.id == sssxd7rocpl67xyvm1979p67q]
     command: "/etc/startup.sh"
 
   worker:
