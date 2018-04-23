@@ -11,6 +11,7 @@ services:
     container_name: "master"
     hostname: "master"
     domainname: "master"
+    command: ["/etc/bootstrap.sh", "-d"]
 
 
   worker:
