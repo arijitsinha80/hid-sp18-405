@@ -34,5 +34,5 @@ COPY python/startup.sh /etc/startup.sh
 RUN chmod +x /etc/runall.sh
 RUN chmod +x /etc/startup.sh
 
-#CMD ["/etc/bootstrap.sh", "-d"]
-CMD ["/etc/startup.sh", "-bash"]
+CMD ["/etc/bootstrap.sh", "-d"]
+#CMD ["/etc/startup.sh", "-bash"]
