@@ -20,9 +20,6 @@ services:
 
   worker:
     image: minchen57/hadoop-docker-python-sentiment-compose-worker
-    ports:
-      - "9901:9864"
-      - "8041:8042"
     depends_on:
       - master
     deploy:
