@@ -1,6 +1,6 @@
 #!/bin/bash
 
-/etc/bootstrap.sh -d 
+/etc/bootstrap.sh 
 /cloudmesh/python/runPythonMapReduce.sh
 
 
