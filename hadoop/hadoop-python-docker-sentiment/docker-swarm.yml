@@ -11,8 +11,7 @@ services:
     container_name: "master"
     hostname: "master"
     domainname: "master"
-    #entrypoint: /etc/startup.sh
-
+   #entrypoint: /etc/startup.sh
 
   worker:
     image: minchen57/hadoop-docker-python-sentiment-compose-worker
@@ -21,7 +20,7 @@ services:
       - master
     deploy:
       mode: replicated
-      replicas: 4
+      replicas: 1
 
 
 
