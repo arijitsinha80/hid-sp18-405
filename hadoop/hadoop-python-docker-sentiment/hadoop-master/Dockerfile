@@ -37,6 +37,6 @@ RUN chmod +x /etc/startup.sh
 ENTRYPOINT ["/etc/startup.sh"]
 #ENTRYPOINT  ["/etc/bootstrap.sh", "-run"]
 #ENTRYPOINT  /etc/bootstrap.sh -run
-#CMD ["/etc/bootstrap.sh", "run"]
+#CMD ["/etc/bootstrap.sh", "-run"]
 #CMD ["/etc/bootstrap.sh", "-d"]
 #CMD ["/etc/startup.sh", "-bash"]

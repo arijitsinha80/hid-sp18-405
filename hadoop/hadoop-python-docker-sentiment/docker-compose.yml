@@ -2,7 +2,7 @@ version: '3'
 
 services:
   master:
-    image: minchen57/hadoop-docker-python-sentiment-compose-master
+    image: minchen57/hadoop-docker-python-sentiment-compose-master:latest
     ports:
       - "8088:8088"
       - "19888:19888"
@@ -15,7 +15,7 @@ services:
       - hadoop-sentiment
 
   worker:
-    image: minchen57/hadoop-docker-python-sentiment-compose-worker
+    image: minchen57/hadoop-docker-python-sentiment-compose-worker:latest
     #container_name: "worker1"
     depends_on:
       - master
