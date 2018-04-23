@@ -20,9 +20,6 @@ nohup $HADOOP_PREFIX/bin/yarn resourcemanager &
 nohup $HADOOP_PREFIX/bin/yarn timelineserver &
 nohup $HADOOP_PREFIX/bin/mapred historyserver &
 
-sleep 30
-/cloudmesh/python/runPythonMapReduce.sh
-
 if [[ $1 == "-d" ]]; then
     while true; do sleep 1000; done
 fi
