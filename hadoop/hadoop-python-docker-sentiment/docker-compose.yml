@@ -11,18 +11,12 @@ services:
     container_name: "master"
     hostname: "master"
     domainname: "master"
-    networks:
-      - hadoop-sentiment
+
 
   worker:
     image: minchen57/hadoop-docker-python-sentiment-compose-worker
     #container_name: "worker1"
     depends_on:
       - master
-    networks:
-      - hadoop-sentiment
 
-networks:
-  hadoop-sentiment:
-    #external:
-      name: hadoop-sentiment
+
