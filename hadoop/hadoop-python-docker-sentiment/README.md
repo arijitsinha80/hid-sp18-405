@@ -87,7 +87,7 @@ The cluster can be deployed on FutureSystem Echo under the docker swarm mode. Th
 
 	example:
 		./swarm-run.sh 30
-
+	
 * At the end of the previous command, there will be http addresses provided in the terminal such as:
 
 		Please look for results at:
@@ -100,6 +100,13 @@ The cluster can be deployed on FutureSystem Echo under the docker swarm mode. Th
 * To remove the deployed stack after running
 
 		./swarm-down.sh
+
+* Note: due to the complication of different physical nodes, sometimes one node could be pulling images from docker-hub and causing delay in start-up of datanodes thus ignored by the namenode. In this case, the web interface at http://149.165.150.XX:8088/cluster will show 0 datanode and one need to use ctrl+C to stop the script, remove the stack and rerun the command:
+		
+		ctrl + c
+		./swarm-down.sh
+		./swarm-run.sh (#OFWORKERS)
+
 
 * Similarly, the service could be scaled up or down to $N workers using the following command at any point when the cluster is actually running:
 
@@ -122,6 +129,13 @@ Result of each iteration will be written to each line of a text file at
 Result of each iteration will be written to each line of a text file at
 
 		 ./benchmark-swarm/(#OFWORKERS)_worker.txt
+
+	Note: due to the complication of different physical nodes, sometimes one node could be pulling images from docker-hub and causing delay in start-up of datanodes thus ignored by the namenode. In this case, the web interface at http://149.165.150.XX:8088/cluster will show 0 datanode and one need to use ctrl+C to stop the script, remove the stack and rerun the command, the previous successful results will be saved. 
+		
+		ctrl + c
+		./swarm-down.sh
+		./benchmark-swarm.sh (#ITER) (#OFWORKERS)
+
 
 * Pseudo-distributed cluster with (#ITER) iterations
 

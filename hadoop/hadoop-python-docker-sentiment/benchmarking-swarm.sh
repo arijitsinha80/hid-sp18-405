@@ -11,7 +11,7 @@ worker=$2
 DESTDIR=benchmark-swarm
 mkdir -p $DESTDIR
 ./swarm-down.sh
-sleep 10
+sleep 20
 
 for i in $(seq 1 $1)
 do
@@ -53,7 +53,7 @@ do
     curl "$host:8088/logs/time.txt" >> ./$DESTDIR/$2_worker.txt
 
     ./swarm-down.sh
-    sleep 10
+    sleep 30
 done
 
 
