@@ -31,10 +31,15 @@ echo "Please track jobs and resources at : "
 echo "$host:8088/cluster"
 
 echo "Please wait for results..."
+j=1
 until curl -f -s "$host:8088/logs/log.txt";
 do
+    if [[ j -gt 12 ]]; then
+        break
+    fi
     echo "not yet, please wait"
-    sleep 30
+    sleep 60
+    j=$((j+1))
 done
 
 echo "getting the results..."

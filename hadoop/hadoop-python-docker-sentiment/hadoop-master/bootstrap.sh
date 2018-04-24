@@ -33,7 +33,7 @@ if [[ $1 == "-bash" ]]; then
 fi
 
 if [[ $1 == "-run" ]]; then
-    sleep 30
+    sleep 45
     (time /cloudmesh/python/runPythonMapReduce.sh) 2>&1 | tee -a /cloudmesh/python/log.txt
     export PATH=$PATH:/$HADOOP_PREFIX/bin
     tail -3 /cloudmesh/python/log.txt |head -1>> /cloudmesh/python/time.txt

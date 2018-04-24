@@ -101,7 +101,7 @@ The cluster can be deployed on FutureSystem Echo under the docker swarm mode. Th
 
 		./swarm-down.sh
 
-* Note: due to the complication of different physical nodes, sometimes one node could be pulling images from docker-hub and causing delay in start-up of datanodes thus ignored by the namenode. In this case, the web interface at http://149.165.150.XX:8088/cluster will show 0 datanode and one need to use ctrl+C to stop the script, remove the stack and rerun the command:
+* Note: due to the complication of different physical nodes, sometimes one node could be pulling images from docker-hub and causing delay in start-up of datanodes thus ignored by the namenode. In extreme case, the web interface at http://149.165.150.XX:8088/cluster will show 0 active node and one need to use ctrl+C to stop the script, remove the stack and rerun the command:
 		
 		ctrl + c
 		./swarm-down.sh
@@ -130,7 +130,9 @@ Result of each iteration will be written to each line of a text file at
 
 		 ./benchmark-swarm/(#OFWORKERS)_worker.txt
 
-	Note: due to the complication of different physical nodes, sometimes one node could be pulling images from docker-hub and causing delay in start-up of datanodes thus ignored by the namenode. In this case, the web interface at http://149.165.150.XX:8088/cluster will show 0 datanode and one need to use ctrl+C to stop the script, remove the stack and rerun the command, the previous successful results will be saved. 
+	Note: due to the complication of different physical nodes, sometimes one node could cause delay in start-up of datanodes thus ignored by the namenode. In extreme case, the web interface at http://149.165.150.XX:8088/cluster will show 0 active node and the mapreduce job will terminate when it tries to start. The result written to the txt file would be really small like 1 or 2 minutes which needs to be filtered out in post-processing. The script will continue running and 
+	previous successful results will be saved. In case one wants to 
+	use ctrl+C to stop the script, remove the stack and rerun the command: 
 		
 		ctrl + c
 		./swarm-down.sh
