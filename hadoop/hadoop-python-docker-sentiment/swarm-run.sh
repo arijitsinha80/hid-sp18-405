@@ -42,4 +42,6 @@ rm -rf $DESTDIR
 wget -r -nH -np -nv -R "index.html*" -R "temp.txt*" -R "time.txt" "$host:8088/logs"
 mv logs/ $DESTDIR/
 
+echo "shutting down the service"
+./swarm-down.sh
 echo "done"

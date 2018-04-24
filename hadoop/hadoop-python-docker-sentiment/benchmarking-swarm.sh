@@ -38,7 +38,7 @@ do
     echo "$host:8088/cluster"
 
     echo "Please wait for results..."
-    until curl -f -s "$host:8088/logs/logs.txt";
+    until curl -f -s "$host:8088/logs/log.txt";
     do
         echo "not yet, please wait"
         sleep 30
