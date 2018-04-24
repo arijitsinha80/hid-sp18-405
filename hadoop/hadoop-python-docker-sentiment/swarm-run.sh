@@ -1,8 +1,10 @@
 #!/bin/bash
 if [ $# -ne 1 ]; then
-worker=1
-else worker=$1
+    worker=1
+else
+    worker=$1
 fi
+
 DESTDIR=Results
 
 echo "starting the containers in swarm mode"
@@ -22,12 +24,14 @@ else
     host = "http://149.165.150.7${nodeID: -1}"
 fi
 
+
 echo "Please look for results at: "
 echo "$host:50070"
 echo "Please track jobs and resources at : "
 echo "$host:8088/cluster"
 
-while curl --fail  "$host:8088/logs/logs.txt";
+echo "Please wait for results..."
+until curl -f -s "$host:8088/logs/log.txt";
 do
     echo "not yet, please wait"
     sleep 120
@@ -35,10 +39,7 @@ done
 
 echo "getting the results..."
 rm -rf $DESTDIR
-mkdir $DESTDIR
-curl "$host:8088/logs/log.txt" -o $DESTDIR/log.txt
-curl "$host:8088/logs/time.txt" -o $DESTDIR/time.txt
-curl "$host:8088/logs/output_pos_tagged" -o $DESTDIR/output_pos_tagged
-curl "$host:8088/logs/output_neg_tagged" -o $DESTDIR/output_neg_tagged
+wget -r -nH -np -R "index.html*" "$host:8088/logs"
+mv logs/ $DESTDIR/
 
-ehco "done"
+echo "done"

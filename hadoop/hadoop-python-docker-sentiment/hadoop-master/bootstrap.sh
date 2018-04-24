@@ -39,8 +39,8 @@ if [[ $1 == "-run" ]]; then
     tail -3 /cloudmesh/python/log.txt |head -1>> /cloudmesh/python/time.txt
     cp /cloudmesh/python/time.txt $HADOOP_PREFIX/logs/time.txt
     cp /cloudmesh/python/log.txt $HADOOP_PREFIX/logs/log.txt
-    cp /cloudmesh/python/output_pos_tagged $HADOOP_PREFIX/logs/output_pos_tagged
-    cp /cloudmesh/python/output_neg_tagged $HADOOP_PREFIX/logs/output_neg_tagged
+    cp -r /cloudmesh/python/output_pos_tagged $HADOOP_PREFIX/logs/output_pos_tagged
+    cp -r /cloudmesh/python/output_neg_tagged $HADOOP_PREFIX/logs/output_neg_tagged
     while true; do sleep 1000; done
 fi
 

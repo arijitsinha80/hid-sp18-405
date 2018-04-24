@@ -29,7 +29,7 @@ echo "$host:50070"
 echo "Please track jobs and resources at : "
 echo "$host:8088/cluster"
 
-until curl -f -s "$host:8088/logs/logs.txt";
+until curl -f -s "$host:8088/logs/log.txt";
 do
     echo "not yet, please wait"
     sleep 120
@@ -37,10 +37,7 @@ done
 
 echo "getting the results..."
 rm -rf $DESTDIR
-mkdir $DESTDIR
-curl "$host:8088/logs/log.txt" -o $DESTDIR/log.txt
-curl "$host:8088/logs/time.txt" -o $DESTDIR/time.txt
-curl "$host:8088/logs/output_pos_tagged" -o $DESTDIR/output_pos_tagged
-curl "$host:8088/logs/output_neg_tagged" -o $DESTDIR/output_neg_tagged
+wget -r -nH -np -R "index.html*" "$host:8088/logs"
+mv logs/ $DESTDIR/
 
 echo "done"
