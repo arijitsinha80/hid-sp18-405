@@ -37,3 +37,12 @@ if [[ $1 == "-run" ]]; then
     while true; do sleep 1000; done
 fi
 
+if [[ $1 == "-benchmark" ]]; then
+    sleep 30
+    for i in $(seq 1 $2)
+    export PATH=$PATH:/$HADOOP_PREFIX/bin
+    (time /cloudmesh/python/runPythonMapReduce.sh) 2>&1 | tee -a /cloudmesh/python/log.txt
+    export PATH=$PATH:/$HADOOP_PREFIX/bin
+    hadoop fs -put /cloudmesh/python/log.txt /
+    while true; do sleep 1000; done
+fi
