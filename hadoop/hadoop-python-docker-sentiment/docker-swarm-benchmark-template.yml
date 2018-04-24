@@ -18,6 +18,7 @@ services:
       - "8188:8188"
       - "50070:50070"
       - "50075:50075"
+      - "50010:50010"
     container_name: "master"
     hostname: "master"
     domainname: "master"
