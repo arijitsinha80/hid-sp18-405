@@ -13,7 +13,16 @@ echo "running the sentiment analysis on movie reviews at backend..."
 echo "getting physical node that runs master"
 nodeID=$(docker stack ps  -f "name=hadoop-sentiment_master.1" --format "{{.Node}}" hadoop-sentiment)
 echo $nodeID
-echo "Please look for results at: "
-echo "http://149.165.150.7${nodeID: -1}:50070"
-echo "Please track jobs and resources at : "
-echo "http://149.165.150.7${nodeID: -1}:8088/cluster"
+s1=${nodeID: -1}
+s2=0
+if [[ "$s1" == "$s2" ]] then
+    echo "Please look for results at: "
+    echo "http://149.165.150.80:50070"
+    echo "Please track jobs and resources at : "
+    echo "http://149.165.150.80:8088/cluster"
+else
+    echo "Please look for results at: "
+    echo "http://149.165.150.7${nodeID: -1}:50070"
+    echo "Please track jobs and resources at : "
+    echo "http://149.165.150.7${nodeID: -1}:8088/cluster"
+fi
