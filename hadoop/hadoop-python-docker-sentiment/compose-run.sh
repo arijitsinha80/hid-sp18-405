@@ -22,6 +22,8 @@ docker-compose scale master=1 worker=$((worker))
 echo "http://localhost:8088 for YARN"
 echo "http://localhost:50070 for HDFS"
 
+echo "pause for 20 seconds"
+sleep 20
 echo "running the sentiment analysis on movie reviews..."
 docker exec master /etc/runall.sh
 
