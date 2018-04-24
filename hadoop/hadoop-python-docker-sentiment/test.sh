@@ -1,26 +1,28 @@
 #!/bin/bash
+
 if [ $# -ne 1 ]; then
 worker=1
 else worker=$1
 fi
+
 DESTDIR=Results
 
-echo "starting the containers in swarm mode"
-docker stack deploy --compose-file docker-swarm.yml hadoop-sentiment
-echo "scale up the service to $worker worker"
-docker service scale hadoop-sentiment_worker=$worker
+docker build -t minchen57/hadoop-docker-python-sentiment-compose-base:latest hadoop-base
+docker build -t minchen57/hadoop-docker-python-sentiment-compose-master:latest hadoop-master
+docker build -t minchen57/hadoop-docker-python-sentiment-compose-worker:latest hadoop-worker
 
-echo "running the sentiment analysis on movie reviews at backend..."
-echo "getting physical node that runs master"
-nodeID=$(docker stack ps  -f "name=hadoop-sentiment_master.1" --format "{{.Node}}" hadoop-sentiment)
-echo $nodeID
-s1=${nodeID: -1}
-s2=0
-if [ "$s1" == "$s2" ]; then
-    host = "http://149.165.150.80"
-else
-    host = "http://149.165.150.7${nodeID: -1}"
-fi
+echo "create the network"
+docker network rm hadoop-sentiment
+docker network create hadoop-sentiment
+
+
+echo "starting the containers..."
+docker-compose scale master=1 worker=$((worker))
+
+echo "http://hostname:8088 for YARN"
+echo "http://hostname:50070 for HDFS"
+
+host="http://149.165.150.76"
 
 echo "Please look for results at: "
 echo "$host:50070"
@@ -41,4 +43,4 @@ curl "$host:8088/logs/time.txt" -o $DESTDIR/time.txt
 curl "$host:8088/logs/output_pos_tagged" -o $DESTDIR/output_pos_tagged
 curl "$host:8088/logs/output_neg_tagged" -o $DESTDIR/output_neg_tagged
 
-ehco "done"
+echo "done"

@@ -19,8 +19,8 @@ docker network create hadoop-sentiment
 echo "starting the containers..."
 docker-compose scale master=1 worker=$((worker))
 
-echo "http://localhost:8088 for YARN"
-echo "http://localhost:50070 for HDFS"
+echo "http://hostname:8088 for YARN"
+echo "http://hostname:50070 for HDFS"
 
 echo "pause for 20 seconds"
 sleep 20
