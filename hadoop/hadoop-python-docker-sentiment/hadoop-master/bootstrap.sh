@@ -20,6 +20,9 @@ nohup $HADOOP_PREFIX/bin/yarn resourcemanager &
 nohup $HADOOP_PREFIX/bin/yarn timelineserver &
 nohup $HADOOP_PREFIX/bin/mapred historyserver &
 
+mkdir -p $HADOOP_PREFIX/logs
+chmod 777 $HADOOP_PREFIX/logs
+data > $HADOOP_PREFIX/logs/temp.txt
 
 if [[ $1 == "-d" ]]; then
     while true; do sleep 1000; done
@@ -36,7 +39,7 @@ if [[ $1 == "-run" ]]; then
     tail -3 /cloudmesh/python/log.txt |head -1>> /cloudmesh/python/time.txt
     mkdir -p $HADOOP_PREFIX/logs
     chmod 777 $HADOOP_PREFIX/logs
-    cp /cloudmesh/python/log.txt $HADOOP_PREFIX/logs/log.txt
+    tail -20 /cloudmesh/python/log.txt >> $HADOOP_PREFIX/logs/log.txt
     cp /cloudmesh/python/time.txt $HADOOP_PREFIX/logs/time.txt
     hadoop fs -put /cloudmesh/python/log.txt /
     while true; do sleep 1000; done
