@@ -33,11 +33,11 @@ if [[ $1 == "-run" ]]; then
     sleep 30
     (time /cloudmesh/python/runPythonMapReduce.sh) 2>&1 | tee -a /cloudmesh/python/log.txt
     export PATH=$PATH:/$HADOOP_PREFIX/bin
-    tail -3 /cloudmesh/python/log.txt |head -1>>./cloudmesh/python/time.txt
+    tail -3 /cloudmesh/python/log.txt |head -1>> /cloudmesh/python/time.txt
     mkdir -p $HADOOP_PREFIX/logs
     chmod 777 $HADOOP_PREFIX/logs
-    cp ./cloudmesh/python/log.txt $HADOOP_PREFIX/logs/log.txt
-    cp ./cloudmesh/python/time.txt $HADOOP_PREFIX/logs/time.txt
+    cp /cloudmesh/python/log.txt $HADOOP_PREFIX/logs/log.txt
+    cp /cloudmesh/python/time.txt $HADOOP_PREFIX/logs/time.txt
     hadoop fs -put /cloudmesh/python/log.txt /
     while true; do sleep 1000; done
 fi
@@ -49,11 +49,11 @@ fi
 #    do
 #        hadoop fs -rm -R /nlp
 #        (time /cloudmesh/python/runPythonMapReduce.sh) 2>&1 | tee -a /cloudmesh/python/log.txt
-#        tail -3 /cloudmesh/python/log.txt |head -1>>./cloudmesh/python/$3_worker.txt
+#        tail -3 /cloudmesh/python/log.txt |head -1>>/cloudmesh/python/$3_worker.txt
 #        mkdir -p $HADOOP_PREFIX/logs
 #        chmod 777 $HADOOP_PREFIX/logs
-#        cp ./cloudmesh/python/log.txt $HADOOP_PREFIX/logs/log.txt
-#        cp ./cloudmesh/python/$3_worker.txt $HADOOP_PREFIX/logs/$3_worker.txt
+#        cp /cloudmesh/python/log.txt $HADOOP_PREFIX/logs/log.txt
+#        cp /cloudmesh/python/$3_worker.txt $HADOOP_PREFIX/logs/$3_worker.txt
 #    done
 #    while true; do sleep 1000; done
 #fi
