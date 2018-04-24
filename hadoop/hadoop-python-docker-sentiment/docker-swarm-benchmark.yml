@@ -1,15 +1,6 @@
 version: '3'
 
 services:
-  worker:
-    image: minchen57/hadoop-docker-python-sentiment-compose-worker:latest
-    #container_name: "worker1"
-    depends_on:
-      - master
-    deploy:
-      mode: replicated
-      replicas: 1
-
   master:
     image: minchen57/hadoop-docker-python-sentiment-compose-master:latest
     ports:
@@ -23,3 +14,12 @@ services:
     hostname: "master"
     domainname: "master"
     entrypoint: ["/etc/bootstrap.sh", "-benchmark", "2",  "15"]
+
+  worker:
+    image: minchen57/hadoop-docker-python-sentiment-compose-worker:latest
+    #container_name: "worker1"
+    depends_on:
+      - master
+    deploy:
+      mode: replicated
+      replicas: 1
