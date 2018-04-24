@@ -36,3 +36,4 @@ if [[ $1 == "-run" ]]; then
     hadoop fs -put /cloudmesh/python/log.txt /
     while true; do sleep 1000; done
 fi
+
