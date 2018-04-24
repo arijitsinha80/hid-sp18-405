@@ -27,9 +27,9 @@ do
     s1=${nodeID: -1}
     s2=0
     if [ "$s1" == "$s2" ]; then
-        host = "http://149.165.150.80"
+        host="http://149.165.150.80"
     else
-        host = "http://149.165.150.7${nodeID: -1}"
+        host="http://149.165.150.7${nodeID: -1}"
     fi
 
     echo "Please look for results at: "
