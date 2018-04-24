@@ -1,13 +1,5 @@
 #!/bin/bash
 
-DESTDIR=Results
-
-docker build -t minchen57/hadoop-docker-python-sentiment-compose-base:latest hadoop-base
-docker build -t minchen57/hadoop-docker-python-sentiment-compose-master:latest hadoop-master
-docker build -t minchen57/hadoop-docker-python-sentiment-compose-worker:latest hadoop-worker
-echo "build the cluster"
-echo "DONE"
-
 echo "starting the containers in swarm mode"
 docker stack deploy --compose-file docker-swarm.yml hadoop-sentiment
 echo "running the sentiment analysis on movie reviews at backend..."
