@@ -22,7 +22,7 @@ nodeID=$(docker stack ps  -f "name=hadoop-sentiment_master.1" --format "{{.Node}
 echo $nodeID
 s1=${nodeID: -1}
 s2=0
-if [[ "$s1" == "$s2" ]] then
+if [ "$s1" == "$s2" ]; then
     echo "Please look for results at: "
     echo "http://149.165.150.80:50070"
     echo "Please track jobs and resources at : "
