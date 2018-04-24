@@ -37,12 +37,10 @@ if [[ $1 == "-run" ]]; then
     (time /cloudmesh/python/runPythonMapReduce.sh) 2>&1 | tee -a /cloudmesh/python/log.txt
     export PATH=$PATH:/$HADOOP_PREFIX/bin
     tail -3 /cloudmesh/python/log.txt |head -1>> /cloudmesh/python/time.txt
-    tail -20 /cloudmesh/python/log.txt >> /cloudmesh/python/shortlog.txt
-    tail -20 /cloudmesh/python/log.txt >> /cloudmesh/python/time.txt
     mkdir -p $HADOOP_PREFIX/logs
     chmod 777 $HADOOP_PREFIX/logs
     cp /cloudmesh/python/time.txt $HADOOP_PREFIX/logs/time.txt
-    cp /cloudmesh/python/shortlog.txt $HADOOP_PREFIX/logs/shortlog.txt
+    cp /cloudmesh/python/log.txt $HADOOP_PREFIX/logs/log.txt
     hadoop fs -put /cloudmesh/python/log.txt /
     while true; do sleep 1000; done
 fi
