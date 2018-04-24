@@ -39,7 +39,7 @@ done
 
 echo "getting the results..."
 rm -rf $DESTDIR
-wget -r -nH -np -R "index.html*" -R "temp.txt*" -R "time.txt" "$host:8088/logs"
+wget -r -nH -np -nv -R "index.html*" -R "temp.txt*" -R "time.txt" "$host:8088/logs"
 mv logs/ $DESTDIR/
 
 echo "done"
