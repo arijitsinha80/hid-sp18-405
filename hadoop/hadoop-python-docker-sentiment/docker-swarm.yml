@@ -8,11 +8,10 @@ services:
       - "19888:19888"
       - "8188:8188"
       - "50070:50070"
-      - "9000:9000"
     container_name: "master"
     hostname: "master"
     domainname: "master"
-    #entrypoint: /etc/bootstrap.sh -run
+    entrypoint: ["/etc/bootstrap.sh", "-run"]
 
   worker:
     image: minchen57/hadoop-docker-python-sentiment-compose-worker:latest
