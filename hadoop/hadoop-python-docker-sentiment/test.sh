@@ -29,7 +29,7 @@ echo "$host:50070"
 echo "Please track jobs and resources at : "
 echo "$host:8088/cluster"
 
-while curl --fail  "$host:8088/logs/logs.txt";
+until curl -f -s "$host:8088/logs/logs.txt";
 do
     echo "not yet, please wait"
     sleep 120
