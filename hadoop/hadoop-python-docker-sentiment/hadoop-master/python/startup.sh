@@ -1,6 +1,9 @@
 #!/bin/bash
 
-/etc/bootstrap.sh 
+/etc/bootstrap.sh
+mkdir -p $HADOOP_PREFIX/logs
+chmod 777 $HADOOP_PREFIX/logs
+date > $HADOOP_PREFIX/logs/date.txt
 /cloudmesh/python/runPythonMapReduce.sh
 
 
