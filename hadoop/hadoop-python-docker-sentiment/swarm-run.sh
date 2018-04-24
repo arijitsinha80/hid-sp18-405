@@ -34,7 +34,7 @@ echo "Please wait for results..."
 until curl -f -s "$host:8088/logs/log.txt";
 do
     echo "not yet, please wait"
-    sleep 120
+    sleep 30
 done
 
 echo "getting the results..."

@@ -15,7 +15,7 @@ services:
     domainname: "master"
     networks:
       - hadoop-sentiment
-    command: ["/etc/bootstrap.sh", "-run"]
+    command: ["/etc/bootstrap.sh", "-d"]
 
   worker:
     image: minchen57/hadoop-docker-python-sentiment-compose-worker:latest
