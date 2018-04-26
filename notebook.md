@@ -28,6 +28,10 @@
 * 2018/04/15 Build the docker hadoop cluster with docker-compose
 * 2018/04/16 Automate setting up cluster and running analysis by makefile and start benchmarking
 * 2018/04/17 Wrote in the paper algortihm and data part
+* 2018/04/20 Docker-compose cluster running on Echo
+* 2018/04/23 Docker-swarm cluster running on Echo
+* 2018/04/24 Benchmarking results from docker-swarm on Echo
+* 2018/04/24 Draw diagrams for paper, re-organize paper structure
 
 # Weeks with no progress
 
