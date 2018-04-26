@@ -1,10 +1,5 @@
 #!/bin/bash
 
-
-./benchmarking-swarm.sh 9 40
-./benchmarking-full.sh 10 9
-./benchmarking-full.sh 10 10
-./benchmarking-full.sh 10 15
 ./benchmarking-full.sh 10 20
 ./benchmarking-full.sh 10 25
 ./benchmarking-full.sh 10 30
