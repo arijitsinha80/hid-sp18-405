@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  master:
+  master1:
     image: minchen57/hadoop-docker-python-sentiment-compose-master:latest
     ports:
       - "8088:8088"
@@ -10,9 +10,9 @@ services:
       - "50070:50070"
       - "50075:50075"
       - "50010:50010"
-    container_name: "master"
-    hostname: "master"
-    domainname: "master"
+    container_name: "master1"
+    hostname: "master1"
+    domainname: "master1"
     networks:
       - hadoop-sentiment
     command: ["/etc/bootstrap.sh", "-d"]
@@ -21,7 +21,7 @@ services:
     image: minchen57/hadoop-docker-python-sentiment-compose-worker:latest
     #container_name: "worker1"
     depends_on:
-      - master
+      - master1
     networks:
       - hadoop-sentiment
 
