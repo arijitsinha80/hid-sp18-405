@@ -11,16 +11,24 @@ docker build -t minchen57/hadoop-docker-python-sentiment-compose-base:latest had
 docker build -t minchen57/hadoop-docker-python-sentiment-compose-master:latest hadoop-master
 docker build -t minchen57/hadoop-docker-python-sentiment-compose-worker:latest hadoop-worker
 
+docker-compose down
+if docker network rm hadoop-sentiment
+then
+    echo "existing network removed"
+else
+    echo "no existing network found"
+fi
+
 echo "create the network"
-docker network rm hadoop-sentiment
 docker network create hadoop-sentiment
 
 
 echo "starting the containers..."
 docker-compose scale master=1 worker=$((worker))
 
-echo "http://hostname:8088 for YARN"
-echo "http://hostname:50070 for HDFS"
+echo "http://localhost:8088 for YARN"
+echo "http://localhost:50070 for HDFS"
+echo "if you are on Echo, use 149.165.150.76 to replace localhost"
 
 echo "pause for 20 seconds"
 sleep 20

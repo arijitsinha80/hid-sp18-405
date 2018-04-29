@@ -8,11 +8,13 @@ The author appreciates the help of Bo Feng regarding the cluster deployment on E
 
 ## Run fully distributed cluster using the Makefile
 
+* Pre-requisite: Docker, Docker-compose, Make
 * Single command to build images, start cluster, run analysis and get back results before shutting down the cluster by providing the number of workers needed (default is 1):
 
 		make all worker=(#OFWORKERS)
 
 	example: 
+	
 		make all worker=3
 
 * Build images needed for master and workers
@@ -23,9 +25,9 @@ The author appreciates the help of Bo Feng regarding the cluster deployment on E
 
 		make shell
 
-* Launch hadoop cluster at back end
+* Launch hadoop cluster at back end with certain number of workers
 
-		make start
+		make start worker=(#OFWORKERS)
 
 * Run the analysis after cluster is lunched
 
@@ -41,13 +43,21 @@ The author appreciates the help of Bo Feng regarding the cluster deployment on E
 		
 * One can check the ResourceManger at [http://localhost:8088](http://localhost:8088) and HDFS at [http://localhost:50070](http://localhost:50070)
 
+* Results will be in the following directory
+
+		./Results
+
 ## Run pseudo-distributed cluster 
 
-To execute the pseudo-distributed cluster and get results, one could use the shell script:
+* To execute the pseudo-distributed cluster and get results, one could use the shell script:
 
 		./pseudo-run.sh
+		
+* The results will be in the following directory
 
-There is also a Makefile in the directory hadoop-pseudo allowing more options including build image, start cluster, start interactive shell etc. For details, please see the Readme.md file
+		./Results-pseudo
+
+* There is also a Makefile in the directory hadoop-pseudo allowing more options including build image, start cluster, start interactive shell etc. For details, please see the Readme.md file
 
 		vi hadoop-pseudo/Readme.md
 
@@ -57,22 +67,25 @@ The cluster can be deployed on FutureSystem Echo. Both pseudo-distributed and fu
 
 * clone the repository 
 		
-		git clone https://github.com/cloudmesh-community/hid-sp18-419.git
+		git clone https://github.com/cloudmesh-community/hid-sp18-405.git
 
 * cd to the directory hadoop-python-docker-sentiment
 
-		 cd hid-sp18-419/project-code/hadoop-python-docker-sentiment/
+		cd hid-sp18-405/hadoop/hadoop-python-docker-sentiment/
 
-* To start pseudo-distributed cluster, run analysis and get back results before shutting down the cluster
+* To start pseudo-distributed cluster, run analysis and get back results in ./Results-pseudo before shutting down the cluster
 
 		./pseudo-run.sh
 
-* To start fully distributed cluster with number of workers using docker-compose, run analysis and get back results before shutting down the cluster 
+* To start fully distributed cluster with number of workers using docker-compose, run analysis and get back results in ./Results before shutting down the cluster 
 
 		./compose-run.sh (#OFWORKERS)
 
 	example:
-		./compose-run.sh 3
+	
+		./compose-run.sh 8
+
+* One can check the ResourceManger at [http://149.165.150.76:8088/cluster](http://localhost:8088) and HDFS at [http://149.165.150.76:50070](http://localhost:50070)
 
 * To remove the Results folders
 
@@ -89,18 +102,19 @@ The cluster can be deployed on FutureSystem Echo under the docker swarm mode. Th
 
 * clone the repository (if you have not done so)
 		
-		git clone https://github.com/cloudmesh-community/hid-sp18-419.git
+		git clone https://github.com/cloudmesh-community/hid-sp18-405.git
 
 * cd to the directory hadoop-python-docker-sentiment
 
-		 cd hid-sp18-419/project-code/hadoop-python-docker-sentiment/
+		cd hid-sp18-405/hadoop/hadoop-python-docker-sentiment/
 
 * To start fully distributed cluster with number of workers using docker stack deploy, run analysis and get back the result: 
 
 		./swarm-run.sh (#OFWORKERS)
 
 	example:
-		./swarm-run.sh 30
+	
+		./swarm-run.sh 15
 	
 * At the end of the previous command, there will be http addresses provided in the terminal such as:
 
@@ -132,19 +146,21 @@ Use the two following shell scripts to run customized number of iterations in or
 
 * Fully distributed cluster with (#OFWORKERS) of workers and (#ITER) iterations (without swarm)
 
-		./benchmark-full.sh (#ITER) (#OFWORKERS)
-Result of each iteration will be written to each line of a text file at
+		./benchmarking-full.sh (#ITER) (#OFWORKERS)
+		
+* Result of each iteration will be written to each line of a text file at
 
-		 ./benchmark-full/(#OFWORKERS)_worker.txt
+		./benchmark-full/(#OFWORKERS)_worker.txt
 
 * Fully distributed cluster with (#OFWORKERS) of workers and (#ITER) iterations (with swarm)
 
-		./benchmark-swarm.sh (#ITER) (#OFWORKERS)
-Result of each iteration will be written to each line of a text file at
+		./benchmarking-swarm.sh (#ITER) (#OFWORKERS)
+		
+* Result of each iteration will be written to each line of a text file at
 
-		 ./benchmark-swarm/(#OFWORKERS)_worker.txt
+		./benchmark-swarm/(#OFWORKERS)_worker.txt
 
-	Note: due to the complication of different physical nodes, sometimes one node could cause delay in start-up of datanodes thus ignored by the namenode. In extreme case, the web interface at http://149.165.150.XX:8088/cluster will show 0 active node and the mapreduce job will terminate when it tries to start. The benchmarking script will continue running and ignore the unsuccessful iteration. In case one wants to use ctrl+C to stop the script, remove the stack and rerun the command: 
+* Note: due to the complication of different physical nodes, sometimes one node could cause delay in start-up of datanodes thus ignored by the namenode. In extreme case, the web interface at http://149.165.150.XX:8088/cluster will show 0 active node and the mapreduce job will terminate when it tries to start. The benchmarking script will continue running and ignore the unsuccessful iteration. In case one wants to use ctrl+C to stop the script, remove the stack and rerun the command: 
 		
 		ctrl + c
 		./swarm-down.sh
@@ -153,7 +169,7 @@ Result of each iteration will be written to each line of a text file at
 
 * Pseudo-distributed cluster with (#ITER) iterations
 
-		./benchmark-pseudo.sh (#ITER) 
-Result of each iteration will be written to each line of a text file at 
+		./benchmarking-pseudo.sh (#ITER) 
+* Result of each iteration will be written to each line of a text file at 
 
 		./benchmark-pseudo/pseudo.txt

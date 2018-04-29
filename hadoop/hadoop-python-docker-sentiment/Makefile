@@ -11,8 +11,10 @@ build:
 	docker build -t minchen57/hadoop-docker-python-sentiment-compose-base:latest hadoop-base
 	docker build -t minchen57/hadoop-docker-python-sentiment-compose-master:latest hadoop-master
 	docker build -t minchen57/hadoop-docker-python-sentiment-compose-worker:latest hadoop-worker
+	@echo "remove previous network"
+	docker-compose down
+	if docker network rm hadoop-sentiment; then :; else :; fi
 	@echo "create the network"
-	docker network rm hadoop-sentiment
 	docker network create hadoop-sentiment
 	@echo "DONE"
 
@@ -22,6 +24,7 @@ start:
 	docker-compose scale master=1 worker=$(worker)
 	@echo "http://localhost:50070 for HDFS"
 	@echo "http://localhost:8088 for YARN"
+	@echo "if you are on Echo, use 149.165.150.76 to replace localhost"
 
 shell: start
 	@echo "Now interactive shell for master..."
@@ -44,7 +47,7 @@ down:
 	docker-compose down
 
 
-clean:
+clean: down
 	rm -rf $(DESTDIR)
 	docker network rm hadoop-sentiment
 
