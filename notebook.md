@@ -32,6 +32,8 @@
 * 2018/04/23 Docker-swarm cluster running on Echo
 * 2018/04/24 Benchmarking results from docker-swarm on Echo
 * 2018/04/24 Draw diagrams for paper, re-organize paper structure
+* 2018/04/27 Finished the paper on my part, recheck the code
+* 2018/04/29 Finished final checks, project submitted
 
 # Weeks with no progress
 

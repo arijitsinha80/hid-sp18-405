@@ -31,6 +31,8 @@ shell: start
 	docker exec -it master bash
 
 run:
+	@echo "pause for 30 seconds"
+	sleep 30
 	@echo "running the sentiment analysis on movie reviews..."
 	docker exec master /etc/runall.sh
 
@@ -45,10 +47,11 @@ get: clean dest
 down:
 	@echo "shutting down the cluster..."
 	docker-compose down
-
-
-clean: down
-	rm -rf $(DESTDIR)
 	docker network rm hadoop-sentiment
+
+
+clean:
+	rm -rf $(DESTDIR)
+	
 
 		
