@@ -13,6 +13,7 @@
 * 2018/03/30 Residential Meeting attended
 * 2018/04/06 Residential Meeting attended
 * 2018/04/13 Residential Meeting attended
+* 2018/04/20 Residential Meeting attended
 
 # Term Project
 
@@ -35,7 +36,6 @@
 * 2018/04/27 Finished the paper on my part, recheck the code
 * 2018/04/29 Finished final checks, project submitted
 
-# Weeks with no progress
 
 # Communication
 
